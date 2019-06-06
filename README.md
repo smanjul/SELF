@@ -38,7 +38,7 @@ make install
 This installs the `sfluid` binary in the directory specified by the `prefix` argument
 at the configure stage. To make this binary visible, add
 ```
-export PATH=${PATH}:/path/to/install/directory/bin
+export PATH=$PATH}:/path/to/install/directory/bin
 ```
 to your `.bashrc` file.
 
@@ -48,7 +48,6 @@ Additional options for the configure step include
   --enable-openmp
   --enable-cuda
   --enable-double-precision
-  --enable-timing
 ```
 
 
@@ -62,22 +61,6 @@ make install
 ```
 To use MPI, it is necessary to have an MPI library, like OpenMPI or MPICH, installed
 and have binaries in your path.
-
-
-### OpenMP Multi-Threaded Acceleration
-To enable building of the sfluid executable with multi-threading support via OpenMP,
- you can add the flag `--enable-openmp` at the configure stage.
-```
-./configure --enable-openmp --prefix=/path/to/install/directory
-make
-make install
-```
-This adds the appropriate flag to `FCFLAGS` so that OpenMP directives within the
-SELF-Fluids source are interpreted. Note that OpenMP support can be used with MPI, 
-but cannot be enabled when GPU accelerations are enabled.
-
-At runtime, you will need to set the environment variable `OMP_NUM_THREADS` to
-the desired number of threads.
 
 
 ### GPU Acceleration
@@ -95,11 +78,13 @@ the PGI compilers ( https://www.pgroup.com/products/community.htm )
 
 
 
-## Running
+## Input
 At run-time, the sfluid executable uses the `runtime.params` file for determining the length of 
 the run, mesh size (if structured), and other numerical and physical parameters. Additionally,
-the initial conditions and drag forces are set in `self.equations`. 
+the initial conditions, drag forces, and boundary conditions and topography (for structured mesh) 
+are set in `self.equations`. Together, these two files can completely define a fluid simulation
 
+## Running
 The first time the `sfluid` is executed for an example, it will generate a mesh consistent with 
 the settings in `runtime.params` and initial conditions consistent with those specified in 
 `self.equations`. If `runtime.params` is not present, a sample will be generated for you.
@@ -122,117 +107,105 @@ you can run
 sfluid init
 ```
 
+If you have initial conditions and a mesh file, you can run
+```
+sfluid integrate
+```
+
 Note that if you are running with MPI enabled, you will need to prepend `mpirun -np XX`, replacing
 `XX` with the number of MPI processes.
 
-
-### Output
-The sfluid executable will generate some files specific to SELF-Fluids ( .mesh, .bcm, and .pickup )
-and tecplot output ( .tec ) that can be visualized in VisIt, Paraview, or TecPlot. There are currently
-plans to switch to VTK output to replace the tecplot output in later versions.
-
-
-## Input
-The sfluid binary manages mesh generation, initial condition generation,
-and forward execution of the compressible fluids model. Command line options
-are given as follows : 
-
-```
-sfluid [tool] [options]**
-```
-**[tool]** can be :
-
-
- **help**
-
-   Display a help message
-
-
-
- **meshgen**
-
-   Run only the mesh generator to generate a structured mesh.
-   The structured mesh is built using nXElem, nYElem, and nZElem
-   specified in runtime.params.
-
-   Topography can be set using an equation like
-
-
-         h = exp( -(x-500.0)^2/200.0 )
-
-   in the self.equations file. This will result in a terrain-following
-   structured mesh.
-
-
- **init**
-
-   Run up to the initial condition generation and do not forward
-   step the model. The initial conditions are read in from the 
-   self.equations file. 
-
-
- **[options]** can be :
-  **--param-file /path/to/param/file**
-     Specifies the full path to a file with namelist settings for
-     the sfluid application. If not provided, runtime.params in  
-     your current directory is assumed.                          
-
- **--equation-file /path/to/equation/file**
-     Specifies the full path to an equation file for setting the 
-     initial conditions, topography shape (for structured mesh), 
-     and the drag field. If not provided, self.equations in your 
-     current directory is assumed.
-
 ## Output
 
-### ExtComm.*.bcm
-"External Communications" file. This file is an ASCII file generated in
-`src/self/BoundaryCommunicator_Class.F90`. Each line of the file corresponds
-to a boundary face for a process's domain. A boundary face is a face that
-is associated with only one element in the process's mesh. The boundary face
-can be associated with a physical boundary condition or an MPI communication
-boundary. 
+### Mesh Files
+The mesh files are stored in HDF5 format. The mesh file has the following data layout
+```
+   GROUP "mesh" 
+      GROUP "global" 
+         GROUP "elements" 
+            DATASET "node-ids" 
+         GROUP "faces" 
+            DATASET "boundary-ids" 
+            DATASET "element-ids" 
+            DATASET "element-sides" 
+            DATASET "i-inc" 
+            DATASET "i-start" 
+            DATASET "j-inc" 
+            DATASET "j-start" 
+            DATASET "node-ids" 
+            DATASET "swap-dimension" 
+         GROUP "geometry" 
+            DATASET "boundary-positions" 
+            DATASET "positions" 
+         GROUP "nodes" 
+            DATASET "positions" 
 
-Each line has the unique boundary ID, the external process ID, and 
-a mapping back to the local face ID in the owning process's mesh. 
-One file is generated for each MPI rank. Between "box" and "geom" is a 0-padded integer
-corresponding to the MPI rank ID ( if MPI is not used the rank ID is assumed to be 0 ).
+      GROUP "decomp" 
+         DATASET "element-to-blockid" 
+         GROUP "proc000000" 
+            DATASET "element-ids" 
+            DATASET "face-ids" 
+            DATASET "node-ids" 
+         GROUP "proc000001" 
+            DATASET "element-ids" 
+            DATASET "face-ids" 
+         GROUP "proc000002" 
+            DATASET "element-ids" 
+            DATASET "face-ids" 
+            DATASET "node-ids" 
+         GROUP "proc000003" 
+            DATASET "element-ids" 
+            DATASET "face-ids" 
+            DATASET "node-ids" 
+```
+The `global` group contains the global mesh structure. SELF-Fluids works with a hexahedral unstructured nodal spectral element isoparametric mesh.
 
-This file is created during mesh generation and is read-only for initial
-condition generation and model forward integration.
-	
-### box.*.mesh
-Mesh file. This file is a binary file generated in `src/self/HexMesh_Class.F90`.
-This file lists the number of nodes, number of elements, number of faces, polynomial
-degree, the element-node connectivity, element-node-face connectivity, face-boundary mapping,
-and element neighbor orientation.
+#### Nodes, Elements, and Faces
+The hexahedral unstructured characteristic of the mesh means the we store the mesh as logical cube elements with 8 corner nodes. The nodes in the mesh
+are defined by their physical position ( /mesh/global/nodes/positions ). The elements (connectivity) are defined by 8 corner nodes (/mesh/global/elements/node-ids).
 
-One file is generated for each MPI rank. Between "box" and "geom" is a 0-padded integer
-corresponding to the MPI rank ID ( if MPI is not used the rank ID is assumed to be 0 ).
+Although its not required to completely define the unstructured mesh, we also store faces in the mesh in this file (/mesh/global/faces). Faces are defined by
+four corner nodes. This definition leads to other defining features, such as the elements that share the face (/mesh/global/faces/element-ids). The relative orientation
+of the two elements sharing the face is important for flux calculations in spectral element methods. This orientiation information is stored in
+* /mesh/global/faces/element-sides
+* /mesh/global/faces/i-inc
+* /mesh/global/faces/i-start
+* /mesh/global/faces/j-inc
+* /mesh/global/faces/j-start
+* /mesh/global/faces/swap-dimensions
+For faces that are not shared by two elements, they are marked as boundary faces. Along these faces, boundary conditions are typically applied. SELF-Fluids contains solution
+storage data structure attributes specifically for handling external boundary states. To index those attributes, the faces are also aligned with a boundary ID (/mesh/global/faces/boundary-ids).
 
-This file is created during mesh generation and is read-only for initial
-condition generation and model forward integration.
-
-### box.*.geom
-Geometry file. This file is a binary file in `src/self/HexMesh_Class.F90`.
-This file stores the mesh node positions in addition to the nodal locations
-of quadrature points and metric terms at all quadrature points for each element.
-One file is generated for each MPI rank. Between "box" and "geom" is a 0-padded integer
-corresponding to the MPI rank ID ( if MPI is not used the rank ID is assumed to be 0 ).
-
-This file is created during mesh generation and is read-only for initial
-condition generation and model forward integration.
+#### Element Geometry
+The isoparametric characteristic of the mesh means that the elements can have curved boundaries. This geometry is defined by the physical positions (/mesh/global/geometry/positions) of the
+element at the quadrature points within the element. Further, we opt to store the boundary positions of the element faces (/mesh/global/geometry/boundary-positions). The physical positions 
+at quadrature points define a mapping from physical space to a computational space. When the mesh is read in from file, we can calculate the covariant and contravariant basis vectors in 
+addition to boundary normals and the Jacobian of the mapping.
 
 
-## State.*.h5
-State file. This file is an HDF5 file containing the fluid state at each time level. It is
-generated in `src/fluid/Fluid_Class.F90`. 
-The fluid state consists of the momentum vector, density, density-weighted temperature, pressure, and a
-passive density-weighted tracer. Each state variable is specified at the all of the quadrature points
-in each element of the mesh. 
+#### Domain Decomposition
+SELF-Fluids is parallelized using data-parallelism. Since the mesh determines the amount of work and (in part) the communication patterns with Spectral Element PDE solvers, the mesh is decomposed
+into blocks and assigned to MPI ranks. The decomposition is defined by a mapping of the elements to blocks ( /mesh/decomp/element-to-blockid ). From this, we can derive a group for each MPI rank that
+contains
+* global element ID's (/mesh/decomp/procXXXXXX/element-ids)
+* face ID's (/mesh/decomp/procXXXXXX/face-ids)
+* node ID's (/mesh/decomp/procXXXXXX/node-ids)
+owned by that rank. The XXXXXX, in practice, are replaced with a 0 padded integer for each rank.
+
+
+### Fluid State Files
+The fluid state files are HDF5 files containing the fluid state at each time level. The fluid state consists of the momentum vector, density, density-weighted temperature, pressure, and a
+passive density-weighted tracer. Each state variable is specified at the all of the quadrature points in each element of the mesh. 
 
 The index between "State" and "h5" is a 0-padded integer corresponding to the time stamp DDDDHHMMSSmmm,
 where D = day, H = hour, M = minute, S = second, m = millisecond
 
-These files are created during initial condition generation and forward integration. State files
-are read in during the start of forward integration
+These files are created during initial condition generation and forward integration. State files are read in during the start of forward integration
+
+
+
+## Future Development Plans
+
+* Variable viscosity (LES)
+* Implicit time integration
+* Topography input to mesh
