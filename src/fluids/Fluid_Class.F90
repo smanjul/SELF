@@ -244,13 +244,13 @@ CONTAINS
               s  = myDGSEM % fluidEquations % tracer % evaluate( x )
               s0 = myDGSEM % fluidEquations % staticTracer % evaluate( x )
 
-              Tbar = myDGSEM % static % solution(i,j,k,5,iEl)/myDGSEM % static % solution(i,j,k,4,iEl)
-
-              myDGSEM % state % solution(i,j,k,4,iEl) = -myDGSEM % static % solution(i,j,k,4,iEl)*T/(Tbar + T)
               ! In the in-situ temperature formulation, the potential temperature is calculated from the
               ! equations file, and we convert to the in-situ temperature here
               ! Since (rho*T)' = 0 in this setting, the pressure anomaly is also zero.
               T  = T*( (myDGSEM % static % solution(i,j,k,7,iEl))/myDGSEM % params % P0 )**( myDGSEM % params % R/( myDGSEM % params % R + myDGSEM % params % Cv ) ) 
+
+              Tbar = myDGSEM % static % solution(i,j,k,5,iEl)/myDGSEM % static % solution(i,j,k,4,iEl)
+              myDGSEM % state % solution(i,j,k,4,iEl) = -myDGSEM % static % solution(i,j,k,4,iEl)*T/(Tbar + T)
 
               myDGSEM % state % solution(i,j,k,1,iEl) = ( myDGSEM % state % solution(i,j,k,4,iEl) + myDGSEM % static % solution(i,j,k,4,iEl) )*u
               myDGSEM % state % solution(i,j,k,2,iEl) = ( myDGSEM % state % solution(i,j,k,4,iEl) + myDGSEM % static % solution(i,j,k,4,iEl) )*v
@@ -287,7 +287,6 @@ CONTAINS
       ENDDO
     ENDDO
 
-    CALL myDGSEM % SetPrescribedState( ) ! CPU Kernel
 
 #ifdef HAVE_CUDA
     CALL myDGSEM % state % UpdateDevice( )
@@ -299,6 +298,8 @@ CONTAINS
     CALL myDGSEM % EquationOfState( ) ! GPU Kernel (if CUDA)
 
     CALL myDGSEM % Update_FluidStatics_BCs( ) ! GPU Kernel (if CUDA)
+
+    CALL myDGSEM % SetPrescribedState( ) ! CPU Kernel
 
 #ifdef HAVE_CUDA
     CALL myDGSEM % state % UpdateHost( )
@@ -418,11 +419,9 @@ CONTAINS
     REAL(prec) :: t, dt, rk3_a_local, rk3_g_local
     REAL(prec), ALLOCATABLE :: G3D(:,:,:,:,:)
     INTEGER    :: m, iEl, iT, i, j, k, iEq
-
 #endif
 
     INFO('Start')
-
 
 #ifdef HAVE_CUDA
 
@@ -610,7 +609,6 @@ CONTAINS
     DEALLOCATE( G3D )
 
 #endif
-
     INFO('End')
 
   END SUBROUTINE ForwardStepRK3_Fluid
@@ -2382,7 +2380,7 @@ CONTAINS
           DO i = 0, myDGSEM % params % nPlot
 
             insitu  = ( sol(i,j,k,5,iEl) + bsol(i,j,k,5,iEl) )/( sol(i,j,k,4,iEl) + bsol(i,j,k,4,iEl) )
-            pottemp = insitu*( (bsol(i,j,k,7,iEl) + sol(i,j,k,7,iEl))/myDGSEM % params % P0 )**(-myDGSEM % params % R/( myDGSEM % params % R + myDGSEM % params % Cv ) ) 
+            pottemp = insitu*( myDGSEM % params % P0/(bsol(i,j,k,7,iEl) + sol(i,j,k,7,iEl)) )**(myDGSEM % params % R/( myDGSEM % params % R + myDGSEM % params % Cv ) ) 
 
 
             WRITE(fUnit,'(17(E15.7,1x))') x(i,j,k,1,iEl), &
@@ -3034,9 +3032,8 @@ CONTAINS
     CALL h5fclose_f( file_id, error )
     CALL h5close_f( error )
 
-
-    CALL myDGSEM % SetPrescribedState( )
     CALL myDGSEM % Update_FluidStatics_BCs( )
+    CALL myDGSEM % SetPrescribedState( )
 #ifdef HAVE_CUDA
     CALL myDGSEM % state % UpdateDevice( )
     CALL myDGSEM % static % UpdateDevice( )
@@ -3059,6 +3056,8 @@ CONTAINS
 #endif
 
      INFO('Start')
+
+     ! CPU Kernel
      myDGSEM % static % boundarySolution = CalculateFunctionsAtBoundaries_3D_NodalDG( myDGSEM % dgStorage, &
                                                                                       myDGSEM % static % solution, &
                                                                                       myDGSEM % static % nEquations, &
@@ -3088,7 +3087,6 @@ CONTAINS
 #ifdef HAVE_MPI
     CALL myDGSEM % mpiStateHandler % MPI_Exchange( myDGSEM % static, myDGSEM % mesh )
     CALL myDGSEM % mpiStateHandler % Finalize_MPI_Exchange( )
-
 #endif
 
 #ifdef HAVE_CUDA

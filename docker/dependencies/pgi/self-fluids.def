@@ -3,6 +3,21 @@ From: gcr.io/self-fluids/pgi:latest
 
 %help
 
+This singularity image contains the GPU accelerated build of the self-fluids HPC app.
+To use this image, you must use the --nv flag.
+
+If you have cuda drivers installed locally at /usr/local/cuda, you can bind mount using
+
+  $ singularity test --nv sfluid_pgi.sif
+
+
+To run self-fluids with your own input, you can bind mount a local directory on your system
+to the /input directory within the container. The input directory, at a minimum, should
+contain self-fluids namelist and equations files.
+
+
+  $ singularity run --nv -B /path/to/local/input:/input sfluid_pgi.sif
+
 
 %setup
 
@@ -13,14 +28,9 @@ From: gcr.io/self-fluids/pgi:latest
 
 %post
 
-
-   export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
-   export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/hdf5/lib
-   export PATH=${PATH}:/usr/local/hdf5/bin
-
    cd ${SINGULARITY_ROOTFS}/workspace 
    autoreconf --install
-   FCFLAGS="-O3" \
+   FCFLAGS="-O3" cuda_toolkit_version="cuda10.0"\
    ${SINGULARITY_ROOTFS}/workspace/configure --enable-diagnostics \
                                              --enable-tecplot \
                                              --enable-cuda \
@@ -35,13 +45,17 @@ From: gcr.io/self-fluids/pgi:latest
 
 
 %environment
-   export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib   
-   export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/opt/hdf5/lib
-   export PATH=${PATH}:/opt/hdf5/bin
 
+   export PATH=${PATH}:/usr/local/self-fluids/bin
 
 %test
    
 /usr/local/self-fluids/bin/sfluid --param-file /samples/thermalbubble/runtime.params \
                                   --equation-file /samples/thermalbubble/self.equations
 
+%labels
+
+%runscript
+
+/usr/local/self-fluids/bin/sfluid --param-file /input/runtime.params \
+                                  --equation-file /input/self.equations
