@@ -58,7 +58,7 @@ RUN yum install -y \
     rm -rf /var/cache/yum/*
 RUN mkdir -p /var/tmp && wget -q -nc --no-check-certificate -P /var/tmp http://www.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.bz2 && \
     mkdir -p /var/tmp && tar -x -f /var/tmp/hdf5-1.10.5.tar.bz2 -C /var/tmp -j && \
-    cd /var/tmp/hdf5-1.10.5 &&  CC=gcc CXX=g++ F77=gfortran F90=gfortran FC=gfortran ./configure --prefix=/usr/local/hdf5 --enable-cxx --enable-fortran && \
+    cd /var/tmp/hdf5-1.10.5 &&  CC=mpicc CXX=mpic++ F77=mpifort F90=mpifort FC=mpifort ./configure --prefix=/usr/local/hdf5 --enable-parallel --enable-threadsafe --enable-unsupported --enable-cxx --enable-fortran && \
     make -j$(nproc) && \
     make -j$(nproc) install && \
     rm -rf /var/tmp/hdf5-1.10.5.tar.bz2 /var/tmp/hdf5-1.10.5
