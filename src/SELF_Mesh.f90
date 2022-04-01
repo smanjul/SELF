@@ -1339,7 +1339,8 @@ CONTAINS
         flip = myMesh % sideInfo % hostData(4,s1,e1) - s2*10
         bcid = myMesh % sideInfo % hostData(5,s1,e1)
 
-        IF (bcid == 0) THEN
+        !IF (bcid == 0) THEN
+        IF (e2 /= 0) THEN
 
           IF (PRESENT(decomp)) THEN
             neighborRank = decomp % elemToRank % hostData(e2Global)

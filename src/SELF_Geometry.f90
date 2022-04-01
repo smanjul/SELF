@@ -905,14 +905,51 @@ CONTAINS
     IMPLICIT NONE
     CLASS(SEMHex),INTENT(inout) :: myGeom
     ! Local
-    INTEGER :: iEl,i,j,k
+    INTEGER :: iEl,i,j,k!,n
     REAL(prec) :: fac
     REAL(prec) :: mag
+    !TYPE(Vector3D) :: xmGxl, curlXmGxl
+    !TYPE(Tensor3D) :: gradX
+
+
 
     ! Now calculate the contravariant basis vectors
     ! In this convention, dsdx(j,i) is contravariant vector i, component j
     ! To project onto contravariant vector i, dot vector along the first dimension
+
     ! TO DO : Curl Invariant Form
+    !
+    !  curl( xm grad( xl ) - xl grad (xm) )
+
+    !CALL xmGxl % Init(interp=myGeom % interp,&
+    !                  nVar=3, &
+    !                  nElem=myGeom % nElem)
+
+    !CALL curlXmGxl % Init(interp=myGeom % interp,&
+    !                      nVar=3, &
+    !                      nElem=myGeom % nElem)
+
+    !CALL gradX % Init(interp=myGeom % interp,&
+    !                  nVar=1, &
+    !                  nElem=myGeom % nElem)
+
+    !CALL myGeom % x % Gradient_Vector3D(gradX,gpuAccel=.FALSE.)
+    ! Input : Vector(1:3,...)
+    ! Output : Tensor(1:3,1:3,....)
+    !          > Tensor(1,1) = d/ds1( Vector(1,...) )
+    !          > Tensor(2,1) = d/ds1( Vector(2,...) )
+    !          > Tensor(3,1) = d/ds1( Vector(3,...) )
+    !          > Tensor(1,2) = d/ds2( Vector(1,...) )
+    !          > Tensor(2,2) = d/ds2( Vector(2,...) )
+    !          > Tensor(3,2) = d/ds2( Vector(3,...) )
+
+    !DO n = 1, 3
+
+    !  ! TO DO : Calculate xm*grad(xl) - xl*grad(xm)
+
+    !  CALL xmGxl % Curl(curlXmGxl,gpuAccel=.FALSE.)
+    !ENDDO
+
     DO iEl = 1,myGeom % nElem
       DO k = 0,myGeom % dxds % interp % N
         DO j = 0,myGeom % dxds % interp % N

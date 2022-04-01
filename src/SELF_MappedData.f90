@@ -265,11 +265,11 @@ MODULE SELF_MappedData
   END INTERFACE
 
   INTERFACE
-    SUBROUTINE ContravariantProjection_MappedVector3D_gpu_wrapper(physVector,compVector,dsdx,N,nVar,nEl) &
+    SUBROUTINE ContravariantProjection_MappedVector3D_gpu_wrapper(vector,dsdx,N,nVar,nEl) &
       bind(c,name="ContravariantProjection_MappedVector3D_gpu_wrapper")
       USE ISO_C_BINDING
       IMPLICIT NONE
-      TYPE(c_ptr) :: physVector,compVector,dsdx
+      TYPE(c_ptr) :: vector,dsdx
       INTEGER(C_INT),VALUE :: N,nVar,nEl
     END SUBROUTINE ContravariantProjection_MappedVector3D_gpu_wrapper
   END INTERFACE
@@ -2501,15 +2501,14 @@ CONTAINS
     END IF
   END SUBROUTINE MapToTensor_MappedVector3D
 
-  SUBROUTINE ContravariantProjection_MappedVector3D(physVector,geometry,compVector,gpuAccel)
+  SUBROUTINE ContravariantProjection_MappedVector3D(vector,geometry,gpuAccel)
 #undef __FUNC__
 #define __FUNC__ "ContravariantProjection_MappedVector3D"
     ! Takes a vector that has physical space coordinate directions (x,y,z) and projects the vector
     ! into the the contravariant basis vector directions. Keep in mind that the contravariant basis
     ! vectors are really the Jacobian weighted contravariant basis vectors
     IMPLICIT NONE
-    CLASS(MappedVector3D),INTENT(in) :: physVector
-    TYPE(MappedVector3D),INTENT(inout) :: compVector
+    CLASS(MappedVector3D),INTENT(inout) :: vector
     TYPE(SEMHex),INTENT(in) :: geometry
     LOGICAL,INTENT(in) :: gpuAccel
     ! Local
@@ -2518,38 +2517,37 @@ CONTAINS
 
     IF (gpuAccel) THEN
 
-      CALL ContravariantProjection_MappedVector3D_gpu_wrapper(physVector % interior % deviceData, &
-                                                              compVector % interior % deviceData, &
+      CALL ContravariantProjection_MappedVector3D_gpu_wrapper(vector % interior % deviceData, &
                                                               geometry % dsdx % interior % deviceData, &
-                                                              physVector % interp % N, &
-                                                              physVector % nVar, &
-                                                              physVector % nElem)
+                                                              vector % interp % N, &
+                                                              vector % nVar, &
+                                                              vector % nElem)
 
     ELSE
       ! Assume that tensor(j,i) is vector i, component j
       ! => dot product is done along first dimension to
       ! project onto computational space
-      DO iEl = 1,physVector % nElem
-        DO iVar = 1,physVector % nVar
-          DO k = 0,physVector % interp % N
-            DO j = 0,physVector % interp % N
-              DO i = 0,physVector % interp % N
+      DO iEl = 1,vector % nElem
+        DO iVar = 1,vector % nVar
+          DO k = 0,vector % interp % N
+            DO j = 0,vector % interp % N
+              DO i = 0,vector % interp % N
 
-                Fx = physVector % interior % hostData(1,i,j,k,iVar,iEl)
-                Fy = physVector % interior % hostData(2,i,j,k,iVar,iEl)
-                Fz = physVector % interior % hostData(3,i,j,k,iVar,iEl)
+                Fx = vector % interior % hostData(1,i,j,k,iVar,iEl)
+                Fy = vector % interior % hostData(2,i,j,k,iVar,iEl)
+                Fz = vector % interior % hostData(3,i,j,k,iVar,iEl)
 
-                compVector % interior % hostData(1,i,j,k,iVar,iEl) = &
+                vector % interior % hostData(1,i,j,k,iVar,iEl) = &
                   geometry % dsdx % interior % hostData(1,1,i,j,k,1,iEl)*Fx + &
                   geometry % dsdx % interior % hostData(2,1,i,j,k,1,iEl)*Fy + &
                   geometry % dsdx % interior % hostData(3,1,i,j,k,1,iEl)*Fz
 
-                compVector % interior % hostData(2,i,j,k,iVar,iEl) = &
+                vector % interior % hostData(2,i,j,k,iVar,iEl) = &
                   geometry % dsdx % interior % hostData(1,2,i,j,k,1,iEl)*Fx + &
                   geometry % dsdx % interior % hostData(2,2,i,j,k,1,iEl)*Fy + &
                   geometry % dsdx % interior % hostData(3,2,i,j,k,1,iEl)*Fz
 
-                compVector % interior % hostData(3,i,j,k,iVar,iEl) = &
+                vector % interior % hostData(3,i,j,k,iVar,iEl) = &
                   geometry % dsdx % interior % hostData(1,3,i,j,k,1,iEl)*Fx + &
                   geometry % dsdx % interior % hostData(2,3,i,j,k,1,iEl)*Fy + &
                   geometry % dsdx % interior % hostData(3,3,i,j,k,1,iEl)*Fz
