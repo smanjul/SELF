@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="Spectral Element Library in Fortran. Fortran classes for implementing spectral element methods on CPU and GPU hardware.">
+    <meta name="author" content="Fluid Numerics" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>All Types &ndash; SELF
+</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">SELF </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="../lists/files.html">Source Files</a></li>
+            <li><a href="../lists/modules.html">Modules</a></li>
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+                   <li><a href="../lists/types.html">Derived Types</a></li>
+       
+            </ul>
+        
+            </li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+                             <li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+          </ul>
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12" id='text'>
+			 <h1>Derived Types</h1>
+			 <table class="table table-striped nostretched">
+			 <thead>
+			 <tr><th>Type</th><th>Location</th><th>Extends</th><th>Description</th></tr>
+			 </thead><tbody>
+			   <tr><td><a href='../type/advection_diffusion_1d.html'>advection_diffusion_1d</a></td><td><a href='../module/self_advection_diffusion_1d~2.html'>self_advection_diffusion_1d</a></td><td><a href='../type/advection_diffusion_1d_t.html'>advection_diffusion_1d_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/advection_diffusion_1d~2.html'>advection_diffusion_1d</a></td><td><a href='../module/self_advection_diffusion_1d.html'>self_advection_diffusion_1d</a></td><td><a href='../type/advection_diffusion_1d_t.html'>advection_diffusion_1d_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/advection_diffusion_1d_t.html'>advection_diffusion_1d_t</a></td><td><a href='../module/self_advection_diffusion_1d_t.html'>self_advection_diffusion_1d_t</a></td><td><a href='../type/dgmodel1d.html'>DGModel1D</a></td><td></td></tr>
+			   <tr><td><a href='../type/advection_diffusion_2d.html'>advection_diffusion_2d</a></td><td><a href='../module/self_advection_diffusion_2d.html'>self_advection_diffusion_2d</a></td><td><a href='../type/advection_diffusion_2d_t.html'>advection_diffusion_2d_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/advection_diffusion_2d~2.html'>advection_diffusion_2d</a></td><td><a href='../module/self_advection_diffusion_2d~2.html'>self_advection_diffusion_2d</a></td><td><a href='../type/advection_diffusion_2d_t.html'>advection_diffusion_2d_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/advection_diffusion_2d_t.html'>advection_diffusion_2d_t</a></td><td><a href='../module/self_advection_diffusion_2d_t.html'>self_advection_diffusion_2d_t</a></td><td><a href='../type/dgmodel2d.html'>DGModel2D</a></td><td></td></tr>
+			   <tr><td><a href='../type/advection_diffusion_3d.html'>advection_diffusion_3d</a></td><td><a href='../module/self_advection_diffusion_3d.html'>self_advection_diffusion_3d</a></td><td><a href='../type/advection_diffusion_3d_t.html'>advection_diffusion_3d_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/advection_diffusion_3d~2.html'>advection_diffusion_3d</a></td><td><a href='../module/self_advection_diffusion_3d~2.html'>self_advection_diffusion_3d</a></td><td><a href='../type/advection_diffusion_3d_t.html'>advection_diffusion_3d_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/advection_diffusion_3d_t.html'>advection_diffusion_3d_t</a></td><td><a href='../module/self_advection_diffusion_3d_t.html'>self_advection_diffusion_3d_t</a></td><td><a href='../type/dgmodel3d.html'>DGModel3D</a></td><td></td></tr>
+			   <tr><td><a href='../type/burgers1d.html'>Burgers1D</a></td><td><a href='../module/self_burgers1d.html'>self_Burgers1D</a></td><td><a href='../type/burgers1d_t.html'>Burgers1D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/burgers1d~2.html'>Burgers1D</a></td><td><a href='../module/self_burgers1d~2.html'>self_Burgers1D</a></td><td><a href='../type/burgers1d_t.html'>Burgers1D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/burgers1d_t.html'>Burgers1D_t</a></td><td><a href='../module/self_burgers1d_t.html'>self_Burgers1D_t</a></td><td><a href='../type/dgmodel1d.html'>DGModel1D</a></td><td></td></tr>
+			   <tr><td><a href='../type/dgmodel1d.html'>DGModel1D</a></td><td><a href='../module/self_dgmodel1d.html'>SELF_DGModel1D</a></td><td><a href='../type/dgmodel1d_t.html'>DGModel1D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/dgmodel1d~2.html'>DGModel1D</a></td><td><a href='../module/self_dgmodel1d~2.html'>SELF_DGModel1D</a></td><td><a href='../type/dgmodel1d_t.html'>DGModel1D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/dgmodel1d_t.html'>DGModel1D_t</a></td><td><a href='../module/self_dgmodel1d_t.html'>SELF_DGModel1D_t</a></td><td><a href='../type/model.html'>Model</a></td><td></td></tr>
+			   <tr><td><a href='../type/dgmodel2d.html'>DGModel2D</a></td><td><a href='../module/self_dgmodel2d.html'>SELF_DGModel2D</a></td><td><a href='../type/dgmodel2d_t.html'>DGModel2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/dgmodel2d~2.html'>DGModel2D</a></td><td><a href='../module/self_dgmodel2d~2.html'>SELF_DGModel2D</a></td><td><a href='../type/dgmodel2d_t.html'>DGModel2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/dgmodel2d_t.html'>DGModel2D_t</a></td><td><a href='../module/self_dgmodel2d_t.html'>SELF_DGModel2D_t</a></td><td><a href='../type/model.html'>Model</a></td><td></td></tr>
+			   <tr><td><a href='../type/dgmodel3d.html'>DGModel3D</a></td><td><a href='../module/self_dgmodel3d~2.html'>SELF_DGModel3D</a></td><td><a href='../type/dgmodel3d_t.html'>DGModel3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/dgmodel3d~2.html'>DGModel3D</a></td><td><a href='../module/self_dgmodel3d.html'>SELF_DGModel3D</a></td><td><a href='../type/dgmodel3d_t.html'>DGModel3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/dgmodel3d_t.html'>DGModel3D_t</a></td><td><a href='../module/self_dgmodel3d_t.html'>SELF_DGModel3D_t</a></td><td><a href='../type/model.html'>Model</a></td><td></td></tr>
+			   <tr><td><a href='../type/domaindecomposition.html'>DomainDecomposition</a></td><td><a href='../module/self_domaindecomposition~2.html'>SELF_DomainDecomposition</a></td><td><a href='../type/domaindecomposition_t.html'>DomainDecomposition_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/domaindecomposition~2.html'>DomainDecomposition</a></td><td><a href='../module/self_domaindecomposition.html'>SELF_DomainDecomposition</a></td><td><a href='../type/domaindecomposition_t.html'>DomainDecomposition_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/domaindecomposition_t.html'>DomainDecomposition_t</a></td><td><a href='../module/self_domaindecomposition_t.html'>SELF_DomainDecomposition_t</a></td><td>None</td><td></td></tr>
+			   <tr><td><a href='../type/geometry1d.html'>Geometry1D</a></td><td><a href='../module/self_geometry_1d.html'>SELF_Geometry_1D</a></td><td>None</td><td></td></tr>
+			   <tr><td><a href='../type/lagrange.html'>Lagrange</a></td><td><a href='../module/self_lagrange.html'>SELF_Lagrange</a></td><td><a href='../type/lagrange_t.html'>Lagrange_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/lagrange~2.html'>Lagrange</a></td><td><a href='../module/self_lagrange~3.html'>SELF_Lagrange</a></td><td><a href='../type/lagrange_t.html'>Lagrange_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/lagrange~3.html'>Lagrange</a></td><td><a href='../module/self_lagrange~2.html'>SELF_Lagrange</a></td><td><a href='../type/lagrange_t.html'>Lagrange_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/lagrange_t.html'>Lagrange_t</a></td><td><a href='../module/self_lagrange_t.html'>SELF_Lagrange_t</a></td><td>None</td><td><p>A data structure for working with Lagrange Interpolating Polynomials in one, two, and three dimensions.
+The Lagrange data-structure stores the information necessary to interpolate between two
+sets of grid-points and to estimate the derivative of data at native grid points. Routines for
+multidimensional interpolation are based on the tensor product of 1-D interpolants. It is
+assumed that the polynomial degree (and the interpolation nodes) are the same in each direction.
+This assumption permits the storage of only one array of interpolation nodes and barycentric
+weights and is what allows this data structure to be flexible.</p></td></tr>
+			   <tr><td><a href='../type/lineareuler2d.html'>LinearEuler2D</a></td><td><a href='../module/self_lineareuler2d~2.html'>self_LinearEuler2D</a></td><td><a href='../type/lineareuler2d_t.html'>LinearEuler2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/lineareuler2d~2.html'>LinearEuler2D</a></td><td><a href='../module/self_lineareuler2d.html'>self_LinearEuler2D</a></td><td><a href='../type/lineareuler2d_t.html'>LinearEuler2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/lineareuler2d_t.html'>LinearEuler2D_t</a></td><td><a href='../module/self_lineareuler2d_t.html'>self_LinearEuler2D_t</a></td><td><a href='../type/dgmodel2d.html'>DGModel2D</a></td><td></td></tr>
+			   <tr><td><a href='../type/linearshallowwater2d.html'>LinearShallowWater2D</a></td><td><a href='../module/self_linearshallowwater2d.html'>self_LinearShallowWater2D</a></td><td><a href='../type/linearshallowwater2d_t.html'>LinearShallowWater2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/linearshallowwater2d~2.html'>LinearShallowWater2D</a></td><td><a href='../module/self_linearshallowwater2d~2.html'>self_LinearShallowWater2D</a></td><td><a href='../type/linearshallowwater2d_t.html'>LinearShallowWater2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/linearshallowwater2d_t.html'>LinearShallowWater2D_t</a></td><td><a href='../module/self_linearshallowwater2d_t.html'>self_LinearShallowWater2D_t</a></td><td><a href='../type/dgmodel2d.html'>DGModel2D</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedscalar1d.html'>MappedScalar1D</a></td><td><a href='../module/self_mappedscalar_1d~2.html'>SELF_MappedScalar_1D</a></td><td><a href='../type/mappedscalar1d_t.html'>MappedScalar1D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedscalar1d~2.html'>MappedScalar1D</a></td><td><a href='../module/self_mappedscalar_1d.html'>SELF_MappedScalar_1D</a></td><td><a href='../type/mappedscalar1d_t.html'>MappedScalar1D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedscalar1d_t.html'>MappedScalar1D_t</a></td><td><a href='../module/self_mappedscalar_1d_t.html'>SELF_MappedScalar_1D_t</a></td><td><a href='../type/scalar1d.html'>Scalar1D</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedscalar2d.html'>MappedScalar2D</a></td><td><a href='../module/self_mappedscalar_2d~2.html'>SELF_MappedScalar_2D</a></td><td><a href='../type/mappedscalar2d_t.html'>MappedScalar2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedscalar2d~2.html'>MappedScalar2D</a></td><td><a href='../module/self_mappedscalar_2d.html'>SELF_MappedScalar_2D</a></td><td><a href='../type/mappedscalar2d_t.html'>MappedScalar2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedscalar2d_t.html'>MappedScalar2D_t</a></td><td><a href='../module/self_mappedscalar_2d_t.html'>SELF_MappedScalar_2D_t</a></td><td><a href='../type/scalar2d.html'>Scalar2D</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedscalar3d.html'>MappedScalar3D</a></td><td><a href='../module/self_mappedscalar_3d.html'>SELF_MappedScalar_3D</a></td><td><a href='../type/mappedscalar3d_t.html'>MappedScalar3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedscalar3d~2.html'>MappedScalar3D</a></td><td><a href='../module/self_mappedscalar_3d~2.html'>SELF_MappedScalar_3D</a></td><td><a href='../type/mappedscalar3d_t.html'>MappedScalar3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedscalar3d_t.html'>MappedScalar3D_t</a></td><td><a href='../module/self_mappedscalar_3d_t.html'>SELF_MappedScalar_3D_t</a></td><td><a href='../type/scalar3d.html'>Scalar3D</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedvector2d.html'>MappedVector2D</a></td><td><a href='../module/self_mappedvector_2d.html'>SELF_MappedVector_2D</a></td><td><a href='../type/mappedvector2d_t.html'>MappedVector2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedvector2d~2.html'>MappedVector2D</a></td><td><a href='../module/self_mappedvector_2d~2.html'>SELF_MappedVector_2D</a></td><td><a href='../type/mappedvector2d_t.html'>MappedVector2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedvector2d_t.html'>MappedVector2D_t</a></td><td><a href='../module/self_mappedvector_2d_t.html'>SELF_MappedVector_2D_t</a></td><td><a href='../type/vector2d.html'>Vector2D</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedvector3d.html'>MappedVector3D</a></td><td><a href='../module/self_mappedvector_3d.html'>SELF_MappedVector_3D</a></td><td><a href='../type/mappedvector3d_t.html'>MappedVector3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedvector3d~2.html'>MappedVector3D</a></td><td><a href='../module/self_mappedvector_3d~2.html'>SELF_MappedVector_3D</a></td><td><a href='../type/mappedvector3d_t.html'>MappedVector3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mappedvector3d_t.html'>MappedVector3D_t</a></td><td><a href='../module/self_mappedvector_3d_t.html'>SELF_MappedVector_3D_t</a></td><td><a href='../type/vector3d.html'>Vector3D</a></td><td></td></tr>
+			   <tr><td><a href='../type/mesh1d.html'>Mesh1D</a></td><td><a href='../module/self_mesh_1d.html'>SELF_Mesh_1D</a></td><td><a href='../type/semmesh.html'>SEMMesh</a></td><td></td></tr>
+			   <tr><td><a href='../type/mesh2d.html'>Mesh2D</a></td><td><a href='../module/self_mesh_2d~2.html'>SELF_Mesh_2D</a></td><td><a href='../type/mesh2d_t.html'>Mesh2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mesh2d~2.html'>Mesh2D</a></td><td><a href='../module/self_mesh_2d.html'>SELF_Mesh_2D</a></td><td><a href='../type/mesh2d_t.html'>Mesh2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mesh2d_t.html'>Mesh2D_t</a></td><td><a href='../module/self_mesh_2d_t.html'>SELF_Mesh_2D_t</a></td><td><a href='../type/semmesh.html'>SEMMesh</a></td><td></td></tr>
+			   <tr><td><a href='../type/mesh3d.html'>Mesh3D</a></td><td><a href='../module/self_mesh_3d~2.html'>SELF_Mesh_3D</a></td><td><a href='../type/mesh3d_t.html'>Mesh3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mesh3d~2.html'>Mesh3D</a></td><td><a href='../module/self_mesh_3d.html'>SELF_Mesh_3D</a></td><td><a href='../type/mesh3d_t.html'>Mesh3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/mesh3d_t.html'>Mesh3D_t</a></td><td><a href='../module/self_mesh_3d_t.html'>SELF_Mesh_3D_t</a></td><td><a href='../type/semmesh.html'>SEMMesh</a></td><td></td></tr>
+			   <tr><td><a href='../type/metadata.html'>Metadata</a></td><td><a href='../module/self_metadata.html'>SELF_Metadata</a></td><td>None</td><td></td></tr>
+			   <tr><td><a href='../type/model.html'>Model</a></td><td><a href='../module/self_model.html'>SELF_Model</a></td><td>None</td><td></td></tr>
+			   <tr><td><a href='../type/nulldgmodel1d.html'>NullDGModel1D</a></td><td><a href='../module/self_nulldgmodel1d~2.html'>self_NullDGModel1D</a></td><td><a href='../type/nulldgmodel1d_t.html'>NullDGModel1D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/nulldgmodel1d~2.html'>NullDGModel1D</a></td><td><a href='../module/self_nulldgmodel1d.html'>self_NullDGModel1D</a></td><td><a href='../type/nulldgmodel1d_t.html'>NullDGModel1D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/nulldgmodel1d_t.html'>NullDGModel1D_t</a></td><td><a href='../module/self_nulldgmodel1d_t.html'>self_NullDGModel1D_t</a></td><td><a href='../type/dgmodel1d.html'>DGModel1D</a></td><td></td></tr>
+			   <tr><td><a href='../type/nulldgmodel2d.html'>NullDGModel2D</a></td><td><a href='../module/self_nulldgmodel2d~2.html'>self_NullDGModel2D</a></td><td><a href='../type/nulldgmodel2d_t.html'>NullDGModel2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/nulldgmodel2d~2.html'>NullDGModel2D</a></td><td><a href='../module/self_nulldgmodel2d.html'>self_NullDGModel2D</a></td><td><a href='../type/nulldgmodel2d_t.html'>NullDGModel2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/nulldgmodel2d_t.html'>NullDGModel2D_t</a></td><td><a href='../module/self_nulldgmodel2d_t.html'>self_NullDGModel2D_t</a></td><td><a href='../type/dgmodel2d.html'>DGModel2D</a></td><td></td></tr>
+			   <tr><td><a href='../type/nulldgmodel3d.html'>NullDGModel3D</a></td><td><a href='../module/self_nulldgmodel3d.html'>self_NullDGModel3D</a></td><td><a href='../type/nulldgmodel3d_t.html'>NullDGModel3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/nulldgmodel3d~2.html'>NullDGModel3D</a></td><td><a href='../module/self_nulldgmodel3d~2.html'>self_NullDGModel3D</a></td><td><a href='../type/nulldgmodel3d_t.html'>NullDGModel3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/nulldgmodel3d_t.html'>NullDGModel3D_t</a></td><td><a href='../module/self_nulldgmodel3d_t.html'>self_NullDGModel3D_t</a></td><td><a href='../type/dgmodel3d.html'>DGModel3D</a></td><td></td></tr>
+			   <tr><td><a href='../type/scalar1d.html'>Scalar1D</a></td><td><a href='../module/self_scalar_1d~3.html'>SELF_Scalar_1D</a></td><td><a href='../type/scalar1d_t.html'>Scalar1D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/scalar1d~2.html'>Scalar1D</a></td><td><a href='../module/self_scalar_1d~2.html'>SELF_Scalar_1D</a></td><td><a href='../type/scalar1d_t.html'>Scalar1D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/scalar1d~3.html'>Scalar1D</a></td><td><a href='../module/self_scalar_1d.html'>SELF_Scalar_1D</a></td><td><a href='../type/scalar1d_t.html'>Scalar1D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/scalar1d_t.html'>Scalar1D_t</a></td><td><a href='../module/self_scalar_1d_t.html'>SELF_Scalar_1D_t</a></td><td><a href='../type/self_dataobj.html'>SELF_DataObj</a></td><td></td></tr>
+			   <tr><td><a href='../type/scalar2d.html'>Scalar2D</a></td><td><a href='../module/self_scalar_2d~2.html'>SELF_Scalar_2D</a></td><td><a href='../type/scalar2d_t.html'>Scalar2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/scalar2d~2.html'>Scalar2D</a></td><td><a href='../module/self_scalar_2d.html'>SELF_Scalar_2D</a></td><td><a href='../type/scalar2d_t.html'>Scalar2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/scalar2d_t.html'>Scalar2D_t</a></td><td><a href='../module/self_scalar_2d_t.html'>SELF_Scalar_2D_t</a></td><td><a href='../type/self_dataobj.html'>SELF_DataObj</a></td><td></td></tr>
+			   <tr><td><a href='../type/scalar3d.html'>Scalar3D</a></td><td><a href='../module/self_scalar_3d.html'>SELF_Scalar_3D</a></td><td><a href='../type/scalar3d_t.html'>Scalar3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/scalar3d~2.html'>Scalar3D</a></td><td><a href='../module/self_scalar_3d~2.html'>SELF_Scalar_3D</a></td><td><a href='../type/scalar3d_t.html'>Scalar3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/scalar3d_t.html'>Scalar3D_t</a></td><td><a href='../module/self_scalar_3d_t.html'>SELF_Scalar_3D_t</a></td><td><a href='../type/self_dataobj.html'>SELF_DataObj</a></td><td></td></tr>
+			   <tr><td><a href='../type/self_dataobj.html'>SELF_DataObj</a></td><td><a href='../module/self_data.html'>SELF_Data</a></td><td>None</td><td><p>The SELF_DataObj class is a base class for all data objects in SELF.
+A data object in SELF is a multidimensional array of data, represented
+on both host and device, that is associated with an interpolant, metadata,
+and (optionally) an equation string.
+Type extensions of the SELF_DataObj include scalars, vectors, and tensors
+in 1-D, 2-D, and 3-D using the storage patterns that are expected for
+derivative and interpolation operations defined in SELF_Lagrange.f90
+Additionally, each extended type has the necessary attributes to store
+information on element interiors and element boundaries, both of which
+are commonly used for spectral element solvers.</p></td></tr>
+			   <tr><td><a href='../type/semhex.html'>SEMHex</a></td><td><a href='../module/self_geometry_3d.html'>SELF_Geometry_3D</a></td><td>None</td><td></td></tr>
+			   <tr><td><a href='../type/semmesh.html'>SEMMesh</a></td><td><a href='../module/self_mesh.html'>SELF_Mesh</a></td><td>None</td><td></td></tr>
+			   <tr><td><a href='../type/semquad.html'>SEMQuad</a></td><td><a href='../module/self_geometry_2d.html'>SELF_Geometry_2D</a></td><td>None</td><td></td></tr>
+			   <tr><td><a href='../type/tensor2d.html'>Tensor2D</a></td><td><a href='../module/self_tensor_2d~2.html'>SELF_Tensor_2D</a></td><td><a href='../type/tensor2d_t.html'>Tensor2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/tensor2d~2.html'>Tensor2D</a></td><td><a href='../module/self_tensor_2d.html'>SELF_Tensor_2D</a></td><td><a href='../type/tensor2d_t.html'>Tensor2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/tensor2d_t.html'>Tensor2D_t</a></td><td><a href='../module/self_tensor_2d_t.html'>SELF_Tensor_2D_t</a></td><td><a href='../type/self_dataobj.html'>SELF_DataObj</a></td><td></td></tr>
+			   <tr><td><a href='../type/tensor3d.html'>Tensor3D</a></td><td><a href='../module/self_tensor_3d.html'>SELF_Tensor_3D</a></td><td><a href='../type/tensor3d_t.html'>Tensor3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/tensor3d~2.html'>Tensor3D</a></td><td><a href='../module/self_tensor_3d~2.html'>SELF_Tensor_3D</a></td><td><a href='../type/tensor3d_t.html'>Tensor3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/tensor3d_t.html'>Tensor3D_t</a></td><td><a href='../module/self_tensor_3d_t.html'>SELF_Tensor_3D_t</a></td><td><a href='../type/self_dataobj.html'>SELF_DataObj</a></td><td></td></tr>
+			   <tr><td><a href='../type/vector2d.html'>Vector2D</a></td><td><a href='../module/self_vector_2d~2.html'>SELF_Vector_2D</a></td><td><a href='../type/vector2d_t.html'>Vector2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/vector2d~2.html'>Vector2D</a></td><td><a href='../module/self_vector_2d.html'>SELF_Vector_2D</a></td><td><a href='../type/vector2d_t.html'>Vector2D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/vector2d_t.html'>Vector2D_t</a></td><td><a href='../module/self_vector_2d_t.html'>SELF_Vector_2D_t</a></td><td><a href='../type/self_dataobj.html'>SELF_DataObj</a></td><td></td></tr>
+			   <tr><td><a href='../type/vector3d.html'>Vector3D</a></td><td><a href='../module/self_vector_3d.html'>SELF_Vector_3D</a></td><td><a href='../type/vector3d_t.html'>Vector3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/vector3d~2.html'>Vector3D</a></td><td><a href='../module/self_vector_3d~2.html'>SELF_Vector_3D</a></td><td><a href='../type/vector3d_t.html'>Vector3D_t</a></td><td></td></tr>
+			   <tr><td><a href='../type/vector3d_t.html'>Vector3D_t</a></td><td><a href='../module/self_vector_3d_t.html'>SELF_Vector_3D_t</a></td><td><a href='../type/self_dataobj.html'>SELF_DataObj</a></td><td></td></tr>
+			 </tbody></table>
+             <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: type~~graph~~TypeGraph Pages: 1 -->
+<svg id="typegraphTypeGraph" width="855pt" height="262pt"
+ viewBox="0.00 0.00 855.00 262.22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="type~~graph~~TypeGraph" class="graph" transform="scale(0.27 0.27) rotate(0) translate(4 973.71)">
+<title>type~~graph~~TypeGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-973.71 3184,-973.71 3184,4 -4,4"/>
+<!-- type~lineareuler2d_t -->
+<g id="type~~graph~~TypeGraph_node1" class="node">
+<title>type~lineareuler2d_t</title>
+<g id="a_type~~graph~~TypeGraph_node1"><a xlink:href=".././type/lineareuler2d_t.html" xlink:title="LinearEuler2D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2985,-339 2887,-339 2887,-315 2985,-315 2985,-339"/>
+<text text-anchor="middle" x="2936" y="-324.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">LinearEuler2D_t</text>
+</a>
+</g>
+</g>
+<!-- type~dgmodel2d -->
+<g id="type~~graph~~TypeGraph_node59" class="node">
+<title>type~dgmodel2d</title>
+<g id="a_type~~graph~~TypeGraph_node59"><a xlink:href=".././type/dgmodel2d.html" xlink:title="DGModel2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2827,-429 2751,-429 2751,-405 2827,-405 2827,-429"/>
+<text text-anchor="middle" x="2789" y="-414.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DGModel2D</text>
+</a>
+</g>
+</g>
+<!-- type~lineareuler2d_t&#45;&gt;type~dgmodel2d -->
+<g id="type~~graph~~TypeGraph_edge1" class="edge">
+<title>type~lineareuler2d_t&#45;&gt;type~dgmodel2d</title>
+<path fill="none" stroke="#ff0000" d="M2904.21,-339.14C2890.22,-346.04 2874.49,-355.93 2864,-369 2847.9,-389.06 2871.7,-423.03 2846,-424"/>
+<path fill="none" stroke="#ff0000" d="M2845,-424C2842.48,-424.1 2839.89,-424.1 2837.28,-424.03"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="2837.4,-420.53 2827.2,-423.41 2836.97,-427.51 2837.4,-420.53"/>
+</g>
+<!-- type~domaindecomposition~2 -->
+<g id="type~~graph~~TypeGraph_node2" class="node">
+<title>type~domaindecomposition~2</title>
+<g id="a_type~~graph~~TypeGraph_node2"><a xlink:href=".././type/domaindecomposition~2.html" xlink:title="DomainDecomposition">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1697,-807 1562,-807 1562,-783 1697,-783 1697,-807"/>
+<text text-anchor="middle" x="1629.5" y="-792.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DomainDecomposition</text>
+</a>
+</g>
+</g>
+<!-- type~domaindecomposition_t -->
+<g id="type~~graph~~TypeGraph_node35" class="node">
+<title>type~domaindecomposition_t</title>
+<g id="a_type~~graph~~TypeGraph_node35"><a xlink:href=".././type/domaindecomposition_t.html" xlink:title="DomainDecomposition_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1525,-761 1381,-761 1381,-737 1525,-737 1525,-761"/>
+<text text-anchor="middle" x="1453" y="-746.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DomainDecomposition_t</text>
+</a>
+</g>
+</g>
+<!-- type~domaindecomposition~2&#45;&gt;type~domaindecomposition_t -->
+<g id="type~~graph~~TypeGraph_edge3" class="edge">
+<title>type~domaindecomposition~2&#45;&gt;type~domaindecomposition_t</title>
+<path fill="none" stroke="#ff1000" d="M1561.98,-791.19C1555.89,-790.57 1549.82,-789.84 1544,-789"/>
+<path fill="none" stroke="#ff1000" d="M1543,-789C1532.97,-787.55 1533.86,-779.91 1525,-775 1518.14,-771.2 1510.61,-767.75 1503.1,-764.71"/>
+<polygon fill="#ff1000" stroke="#ff1000" points="1504.24,-761.4 1493.65,-761.06 1501.72,-767.93 1504.24,-761.4"/>
+</g>
+<!-- c_ptr -->
+<g id="type~~graph~~TypeGraph_node95" class="node">
+<title>c_ptr</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="54,-629 0,-629 0,-605 54,-605 54,-629"/>
+<text text-anchor="middle" x="27" y="-614.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">c_ptr</text>
+</g>
+<!-- type~domaindecomposition~2&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge2" class="edge">
+<title>type~domaindecomposition~2&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#ff1000" stroke-dasharray="5,2" d="M1543,-789C1327.24,-757.81 779.93,-783.33 562,-789"/>
+<text text-anchor="middle" x="932.5" y="-789.4" font-family="Helvetica,sans-Serif" font-size="9.50">elemToRank_gpu</text>
+</g>
+<!-- type~burgers1d -->
+<g id="type~~graph~~TypeGraph_node3" class="node">
+<title>type~burgers1d</title>
+<g id="a_type~~graph~~TypeGraph_node3"><a xlink:href=".././type/burgers1d.html" xlink:title="Burgers1D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3147.5,-234 3077.5,-234 3077.5,-210 3147.5,-210 3147.5,-234"/>
+<text text-anchor="middle" x="3112.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Burgers1D</text>
+</a>
+</g>
+</g>
+<!-- type~burgers1d_t -->
+<g id="type~~graph~~TypeGraph_node40" class="node">
+<title>type~burgers1d_t</title>
+<g id="a_type~~graph~~TypeGraph_node40"><a xlink:href=".././type/burgers1d_t.html" xlink:title="Burgers1D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2975.5,-226 2896.5,-226 2896.5,-202 2975.5,-202 2975.5,-226"/>
+<text text-anchor="middle" x="2936" y="-211.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Burgers1D_t</text>
+</a>
+</g>
+</g>
+<!-- type~burgers1d&#45;&gt;type~burgers1d_t -->
+<g id="type~~graph~~TypeGraph_edge4" class="edge">
+<title>type~burgers1d&#45;&gt;type~burgers1d_t</title>
+<path fill="none" stroke="#ff2000" d="M3077.36,-217.89C3061.96,-216.58 3043.56,-215.75 3027,-217"/>
+</g>
+<!-- type~advection_diffusion_3d_t -->
+<g id="type~~graph~~TypeGraph_node4" class="node">
+<title>type~advection_diffusion_3d_t</title>
+<g id="a_type~~graph~~TypeGraph_node4"><a xlink:href=".././type/advection_diffusion_3d_t.html" xlink:title="advection_diffusion_3d_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3008,-665 2864,-665 2864,-641 3008,-641 3008,-665"/>
+<text text-anchor="middle" x="2936" y="-650.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">advection_diffusion_3d_t</text>
+</a>
+</g>
+</g>
+<!-- type~dgmodel3d -->
+<g id="type~~graph~~TypeGraph_node30" class="node">
+<title>type~dgmodel3d</title>
+<g id="a_type~~graph~~TypeGraph_node30"><a xlink:href=".././type/dgmodel3d.html" xlink:title="DGModel3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2827,-727 2751,-727 2751,-703 2827,-703 2827,-727"/>
+<text text-anchor="middle" x="2789" y="-712.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DGModel3D</text>
+</a>
+</g>
+</g>
+<!-- type~advection_diffusion_3d_t&#45;&gt;type~dgmodel3d -->
+<g id="type~~graph~~TypeGraph_edge5" class="edge">
+<title>type~advection_diffusion_3d_t&#45;&gt;type~dgmodel3d</title>
+<path fill="none" stroke="#ff3000" d="M2909.34,-665.12C2895.21,-672.43 2877.8,-682.54 2864,-694 2854.54,-701.85 2858.13,-712.98 2846,-715"/>
+<path fill="none" stroke="#ff3000" d="M2845,-715C2842.49,-715.42 2839.9,-715.75 2837.28,-716.01"/>
+<polygon fill="#ff3000" stroke="#ff3000" points="2836.87,-712.53 2827.12,-716.67 2837.32,-719.51 2836.87,-712.53"/>
+</g>
+<!-- type~scalar1d -->
+<g id="type~~graph~~TypeGraph_node5" class="node">
+<title>type~scalar1d</title>
+<g id="a_type~~graph~~TypeGraph_node5"><a xlink:href=".././type/scalar1d.html" xlink:title="Scalar1D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660,-219 1599,-219 1599,-195 1660,-195 1660,-219"/>
+<text text-anchor="middle" x="1629.5" y="-204.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Scalar1D</text>
+</a>
+</g>
+</g>
+<!-- type~scalar1d_t -->
+<g id="type~~graph~~TypeGraph_node86" class="node">
+<title>type~scalar1d_t</title>
+<g id="a_type~~graph~~TypeGraph_node86"><a xlink:href=".././type/scalar1d_t.html" xlink:title="Scalar1D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1488,-221 1418,-221 1418,-197 1488,-197 1488,-221"/>
+<text text-anchor="middle" x="1453" y="-206.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Scalar1D_t</text>
+</a>
+</g>
+</g>
+<!-- type~scalar1d&#45;&gt;type~scalar1d_t -->
+<g id="type~~graph~~TypeGraph_edge6" class="edge">
+<title>type~scalar1d&#45;&gt;type~scalar1d_t</title>
+<path fill="none" stroke="#ff4100" d="M1598.9,-207.34C1571.38,-207.65 1530.01,-208.13 1498.51,-208.49"/>
+<polygon fill="#ff4100" stroke="#ff4100" points="1498.2,-204.99 1488.24,-208.61 1498.28,-211.99 1498.2,-204.99"/>
+</g>
+<!-- type~nulldgmodel2d~2 -->
+<g id="type~~graph~~TypeGraph_node6" class="node">
+<title>type~nulldgmodel2d~2</title>
+<g id="a_type~~graph~~TypeGraph_node6"><a xlink:href=".././type/nulldgmodel2d~2.html" xlink:title="NullDGModel2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3161,-486 3064,-486 3064,-462 3161,-462 3161,-486"/>
+<text text-anchor="middle" x="3112.5" y="-471.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">NullDGModel2D</text>
+</a>
+</g>
+</g>
+<!-- type~nulldgmodel2d_t -->
+<g id="type~~graph~~TypeGraph_node41" class="node">
+<title>type~nulldgmodel2d_t</title>
+<g id="a_type~~graph~~TypeGraph_node41"><a xlink:href=".././type/nulldgmodel2d_t.html" xlink:title="NullDGModel2D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2989,-444 2883,-444 2883,-420 2989,-420 2989,-444"/>
+<text text-anchor="middle" x="2936" y="-429.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">NullDGModel2D_t</text>
+</a>
+</g>
+</g>
+<!-- type~nulldgmodel2d~2&#45;&gt;type~nulldgmodel2d_t -->
+<g id="type~~graph~~TypeGraph_edge7" class="edge">
+<title>type~nulldgmodel2d~2&#45;&gt;type~nulldgmodel2d_t</title>
+<path fill="none" stroke="#ff5100" d="M3071.91,-461.91C3057.87,-458.23 3041.87,-454.7 3027,-453"/>
+</g>
+<!-- type~mappedvector3d -->
+<g id="type~~graph~~TypeGraph_node7" class="node">
+<title>type~mappedvector3d</title>
+<g id="a_type~~graph~~TypeGraph_node7"><a xlink:href=".././type/mappedvector3d.html" xlink:title="MappedVector3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2256,-753 2152,-753 2152,-729 2256,-729 2256,-753"/>
+<text text-anchor="middle" x="2204" y="-738.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedVector3D</text>
+</a>
+</g>
+</g>
+<!-- type~mappedvector3d_t -->
+<g id="type~~graph~~TypeGraph_node49" class="node">
+<title>type~mappedvector3d_t</title>
+<g id="a_type~~graph~~TypeGraph_node49"><a xlink:href=".././type/mappedvector3d_t.html" xlink:title="MappedVector3D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2061,-641 1948,-641 1948,-617 2061,-617 2061,-641"/>
+<text text-anchor="middle" x="2004.5" y="-626.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedVector3D_t</text>
+</a>
+</g>
+</g>
+<!-- type~mappedvector3d&#45;&gt;type~mappedvector3d_t -->
+<g id="type~~graph~~TypeGraph_edge8" class="edge">
+<title>type~mappedvector3d&#45;&gt;type~mappedvector3d_t</title>
+<path fill="none" stroke="#ff6100" d="M2171.34,-728.92C2164.86,-726.18 2158.14,-723.14 2152,-720 2108.23,-697.59 2060.33,-666.48 2031.61,-647.06"/>
+<polygon fill="#ff6100" stroke="#ff6100" points="2033.22,-643.92 2022.99,-641.19 2029.28,-649.71 2033.22,-643.92"/>
+</g>
+<!-- type~mesh2d~2 -->
+<g id="type~~graph~~TypeGraph_node8" class="node">
+<title>type~mesh2d~2</title>
+<g id="a_type~~graph~~TypeGraph_node8"><a xlink:href=".././type/mesh2d~2.html" xlink:title="Mesh2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2231.5,-862 2176.5,-862 2176.5,-838 2231.5,-838 2231.5,-862"/>
+<text text-anchor="middle" x="2204" y="-847.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Mesh2D</text>
+</a>
+</g>
+</g>
+<!-- type~mesh2d_t -->
+<g id="type~~graph~~TypeGraph_node68" class="node">
+<title>type~mesh2d_t</title>
+<g id="a_type~~graph~~TypeGraph_node68"><a xlink:href=".././type/mesh2d_t.html" xlink:title="Mesh2D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2036.5,-787 1972.5,-787 1972.5,-763 2036.5,-763 2036.5,-787"/>
+<text text-anchor="middle" x="2004.5" y="-772.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Mesh2D_t</text>
+</a>
+</g>
+</g>
+<!-- type~mesh2d~2&#45;&gt;type~mesh2d_t -->
+<g id="type~~graph~~TypeGraph_edge10" class="edge">
+<title>type~mesh2d~2&#45;&gt;type~mesh2d_t</title>
+<path fill="none" stroke="#ff7100" d="M2176.46,-853.63C2157.19,-855.59 2130.56,-856.89 2107.5,-853"/>
+<path fill="none" stroke="#ff7100" d="M2105.5,-853C2069.63,-846.94 2038.4,-816.21 2020.77,-795.18"/>
+<polygon fill="#ff7100" stroke="#ff7100" points="2023.28,-792.72 2014.28,-787.13 2017.83,-797.11 2023.28,-792.72"/>
+</g>
+<!-- type~mesh2d~2&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge9" class="edge">
+<title>type~mesh2d~2&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#ff7100" stroke-dasharray="5,2" d="M2105.5,-853C1779.87,-798.03 1690.15,-926.04 1363,-881"/>
+<text text-anchor="middle" x="1453" y="-892.4" font-family="Helvetica,sans-Serif" font-size="9.50">sideInfo_gpu</text>
+</g>
+<!-- type~mappedvector2d_t -->
+<g id="type~~graph~~TypeGraph_node9" class="node">
+<title>type~mappedvector2d_t</title>
+<g id="a_type~~graph~~TypeGraph_node9"><a xlink:href=".././type/mappedvector2d_t.html" xlink:title="MappedVector2D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2061,-365 1948,-365 1948,-341 2061,-341 2061,-365"/>
+<text text-anchor="middle" x="2004.5" y="-350.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedVector2D_t</text>
+</a>
+</g>
+</g>
+<!-- type~vector2d -->
+<g id="type~~graph~~TypeGraph_node24" class="node">
+<title>type~vector2d</title>
+<g id="a_type~~graph~~TypeGraph_node24"><a xlink:href=".././type/vector2d.html" xlink:title="Vector2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660,-303 1599,-303 1599,-279 1660,-279 1660,-303"/>
+<text text-anchor="middle" x="1629.5" y="-288.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Vector2D</text>
+</a>
+</g>
+</g>
+<!-- type~mappedvector2d_t&#45;&gt;type~vector2d -->
+<g id="type~~graph~~TypeGraph_edge12" class="edge">
+<title>type~mappedvector2d_t&#45;&gt;type~vector2d</title>
+<path fill="none" stroke="#ff8200" d="M1978.92,-340.93C1964.91,-334.58 1946.84,-327.25 1930,-323 1839.07,-300.07 1728.56,-293.56 1670.52,-291.72"/>
+<polygon fill="#ff8200" stroke="#ff8200" points="1670.41,-288.22 1660.32,-291.43 1670.21,-295.21 1670.41,-288.22"/>
+</g>
+<!-- type~semquad -->
+<g id="type~~graph~~TypeGraph_node75" class="node">
+<title>type~semquad</title>
+<g id="a_type~~graph~~TypeGraph_node75"><a xlink:href=".././type/semquad.html" xlink:title="SEMQuad">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1857.5,-386 1793.5,-386 1793.5,-362 1857.5,-362 1857.5,-386"/>
+<text text-anchor="middle" x="1825.5" y="-371.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">SEMQuad</text>
+</a>
+</g>
+</g>
+<!-- type~mappedvector2d_t&#45;&gt;type~semquad -->
+<g id="type~~graph~~TypeGraph_edge11" class="edge">
+<title>type~mappedvector2d_t&#45;&gt;type~semquad</title>
+<path fill="none" stroke="#ff8200" stroke-dasharray="5,2" d="M1947.98,-359.59C1922.02,-362.67 1891.63,-366.27 1867.75,-369.11"/>
+<polygon fill="#ff8200" stroke="#ff8200" points="1867.12,-365.66 1857.6,-370.31 1867.95,-372.61 1867.12,-365.66"/>
+<text text-anchor="middle" x="1907" y="-368.4" font-family="Helvetica,sans-Serif" font-size="9.50">geometry</text>
+</g>
+<!-- type~scalar3d -->
+<g id="type~~graph~~TypeGraph_node10" class="node">
+<title>type~scalar3d</title>
+<g id="a_type~~graph~~TypeGraph_node10"><a xlink:href=".././type/scalar3d.html" xlink:title="Scalar3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660,-513 1599,-513 1599,-489 1660,-489 1660,-513"/>
+<text text-anchor="middle" x="1629.5" y="-498.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Scalar3D</text>
+</a>
+</g>
+</g>
+<!-- type~scalar3d_t -->
+<g id="type~~graph~~TypeGraph_node93" class="node">
+<title>type~scalar3d_t</title>
+<g id="a_type~~graph~~TypeGraph_node93"><a xlink:href=".././type/scalar3d_t.html" xlink:title="Scalar3D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1488,-423 1418,-423 1418,-399 1488,-399 1488,-423"/>
+<text text-anchor="middle" x="1453" y="-408.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Scalar3D_t</text>
+</a>
+</g>
+</g>
+<!-- type~scalar3d&#45;&gt;type~scalar3d_t -->
+<g id="type~~graph~~TypeGraph_edge13" class="edge">
+<title>type~scalar3d&#45;&gt;type~scalar3d_t</title>
+<path fill="none" stroke="#ff9200" d="M1598.74,-493.42C1587.03,-489.97 1573.63,-485.43 1562,-480 1531.53,-465.76 1499.38,-444.28 1478.17,-429.07"/>
+<polygon fill="#ff9200" stroke="#ff9200" points="1480.2,-426.22 1470.05,-423.18 1476.09,-431.89 1480.2,-426.22"/>
+</g>
+<!-- type~dgmodel1d -->
+<g id="type~~graph~~TypeGraph_node11" class="node">
+<title>type~dgmodel1d</title>
+<g id="a_type~~graph~~TypeGraph_node11"><a xlink:href=".././type/dgmodel1d.html" xlink:title="DGModel1D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2827,-211 2751,-211 2751,-187 2827,-187 2827,-211"/>
+<text text-anchor="middle" x="2789" y="-196.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DGModel1D</text>
+</a>
+</g>
+</g>
+<!-- type~dgmodel1d_t -->
+<g id="type~~graph~~TypeGraph_node77" class="node">
+<title>type~dgmodel1d_t</title>
+<g id="a_type~~graph~~TypeGraph_node77"><a xlink:href=".././type/dgmodel1d_t.html" xlink:title="DGModel1D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2714,-228 2629,-228 2629,-204 2714,-204 2714,-228"/>
+<text text-anchor="middle" x="2671.5" y="-213.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DGModel1D_t</text>
+</a>
+</g>
+</g>
+<!-- type~dgmodel1d&#45;&gt;type~dgmodel1d_t -->
+<g id="type~~graph~~TypeGraph_edge14" class="edge">
+<title>type~dgmodel1d&#45;&gt;type~dgmodel1d_t</title>
+<path fill="none" stroke="#ffa200" d="M2750.82,-195.85C2744.76,-196.23 2738.63,-197.17 2733,-199"/>
+</g>
+<!-- type~advection_diffusion_1d_t -->
+<g id="type~~graph~~TypeGraph_node12" class="node">
+<title>type~advection_diffusion_1d_t</title>
+<g id="a_type~~graph~~TypeGraph_node12"><a xlink:href=".././type/advection_diffusion_1d_t.html" xlink:title="advection_diffusion_1d_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3008,-184 2864,-184 2864,-160 3008,-160 3008,-184"/>
+<text text-anchor="middle" x="2936" y="-169.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">advection_diffusion_1d_t</text>
+</a>
+</g>
+</g>
+<!-- type~advection_diffusion_1d_t&#45;&gt;type~dgmodel1d -->
+<g id="type~~graph~~TypeGraph_edge15" class="edge">
+<title>type~advection_diffusion_1d_t&#45;&gt;type~dgmodel1d</title>
+<path fill="none" stroke="#ffb300" d="M2883.68,-184C2871.33,-186.92 2858.19,-190.05 2846,-193"/>
+</g>
+<!-- type~lineareuler2d~2 -->
+<g id="type~~graph~~TypeGraph_node13" class="node">
+<title>type~lineareuler2d~2</title>
+<g id="a_type~~graph~~TypeGraph_node13"><a xlink:href=".././type/lineareuler2d~2.html" xlink:title="LinearEuler2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3157,-318 3068,-318 3068,-294 3157,-294 3157,-318"/>
+<text text-anchor="middle" x="3112.5" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">LinearEuler2D</text>
+</a>
+</g>
+</g>
+<!-- type~lineareuler2d~2&#45;&gt;type~lineareuler2d_t -->
+<g id="type~~graph~~TypeGraph_edge16" class="edge">
+<title>type~lineareuler2d~2&#45;&gt;type~lineareuler2d_t</title>
+<path fill="none" stroke="#ffc300" d="M3067.63,-302.15C3054.42,-302.01 3039.99,-302.91 3027,-306"/>
+</g>
+<!-- type~mappedscalar2d_t -->
+<g id="type~~graph~~TypeGraph_node14" class="node">
+<title>type~mappedscalar2d_t</title>
+<g id="a_type~~graph~~TypeGraph_node14"><a xlink:href=".././type/mappedscalar2d_t.html" xlink:title="MappedScalar2D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2061,-303 1948,-303 1948,-279 2061,-279 2061,-303"/>
+<text text-anchor="middle" x="2004.5" y="-288.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedScalar2D_t</text>
+</a>
+</g>
+</g>
+<!-- type~scalar2d -->
+<g id="type~~graph~~TypeGraph_node47" class="node">
+<title>type~scalar2d</title>
+<g id="a_type~~graph~~TypeGraph_node47"><a xlink:href=".././type/scalar2d.html" xlink:title="Scalar2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660,-345 1599,-345 1599,-321 1660,-321 1660,-345"/>
+<text text-anchor="middle" x="1629.5" y="-330.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Scalar2D</text>
+</a>
+</g>
+</g>
+<!-- type~mappedscalar2d_t&#45;&gt;type~scalar2d -->
+<g id="type~~graph~~TypeGraph_edge18" class="edge">
+<title>type~mappedscalar2d_t&#45;&gt;type~scalar2d</title>
+<path fill="none" stroke="#ffd300" d="M1947.81,-291.26C1927.68,-291.66 1904.8,-292.45 1884,-294 1808.52,-299.62 1789.64,-302.44 1715,-315 1700.24,-317.48 1684.15,-320.77 1670.01,-323.85"/>
+<polygon fill="#ffd300" stroke="#ffd300" points="1669.11,-320.46 1660.1,-326.04 1670.62,-327.3 1669.11,-320.46"/>
+</g>
+<!-- type~mappedscalar2d_t&#45;&gt;type~semquad -->
+<g id="type~~graph~~TypeGraph_edge17" class="edge">
+<title>type~mappedscalar2d_t&#45;&gt;type~semquad</title>
+<path fill="none" stroke="#ffd300" stroke-dasharray="5,2" d="M1977.76,-303.07C1947.09,-317.45 1895.69,-341.56 1861.44,-357.61"/>
+<polygon fill="#ffd300" stroke="#ffd300" points="1859.84,-354.5 1852.27,-361.92 1862.81,-360.84 1859.84,-354.5"/>
+<text text-anchor="middle" x="1907" y="-346.4" font-family="Helvetica,sans-Serif" font-size="9.50">geometry</text>
+</g>
+<!-- type~mesh2d -->
+<g id="type~~graph~~TypeGraph_node15" class="node">
+<title>type~mesh2d</title>
+<g id="a_type~~graph~~TypeGraph_node15"><a xlink:href=".././type/mesh2d.html" xlink:title="Mesh2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2231.5,-669 2176.5,-669 2176.5,-645 2231.5,-645 2231.5,-669"/>
+<text text-anchor="middle" x="2204" y="-654.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Mesh2D</text>
+</a>
+</g>
+</g>
+<!-- type~mesh2d&#45;&gt;type~mesh2d_t -->
+<g id="type~~graph~~TypeGraph_edge19" class="edge">
+<title>type~mesh2d&#45;&gt;type~mesh2d_t</title>
+<path fill="none" stroke="#ffe300" d="M2176.4,-666.36C2168.34,-669.62 2159.62,-673.57 2152,-678 2107.65,-703.78 2104.72,-722.17 2061,-749 2055.52,-752.36 2049.54,-755.58 2043.6,-758.54"/>
+<polygon fill="#ffe300" stroke="#ffe300" points="2041.88,-755.49 2034.38,-762.96 2044.91,-761.8 2041.88,-755.49"/>
+</g>
+<!-- type~advection_diffusion_1d~2 -->
+<g id="type~~graph~~TypeGraph_node16" class="node">
+<title>type~advection_diffusion_1d~2</title>
+<g id="a_type~~graph~~TypeGraph_node16"><a xlink:href=".././type/advection_diffusion_1d~2.html" xlink:title="advection_diffusion_1d">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3180,-150 3045,-150 3045,-126 3180,-126 3180,-150"/>
+<text text-anchor="middle" x="3112.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">advection_diffusion_1d</text>
+</a>
+</g>
+</g>
+<!-- type~advection_diffusion_1d~2&#45;&gt;type~advection_diffusion_1d_t -->
+<g id="type~~graph~~TypeGraph_edge20" class="edge">
+<title>type~advection_diffusion_1d~2&#45;&gt;type~advection_diffusion_1d_t</title>
+<path fill="none" stroke="#fff400" d="M3044.97,-134.25C3038.82,-135.02 3032.75,-136.23 3027,-138"/>
+</g>
+<!-- type~advection_diffusion_2d -->
+<g id="type~~graph~~TypeGraph_node17" class="node">
+<title>type~advection_diffusion_2d</title>
+<g id="a_type~~graph~~TypeGraph_node17"><a xlink:href=".././type/advection_diffusion_2d.html" xlink:title="advection_diffusion_2d">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3180,-570 3045,-570 3045,-546 3180,-546 3180,-570"/>
+<text text-anchor="middle" x="3112.5" y="-555.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">advection_diffusion_2d</text>
+</a>
+</g>
+</g>
+<!-- type~advection_diffusion_2d_t -->
+<g id="type~~graph~~TypeGraph_node39" class="node">
+<title>type~advection_diffusion_2d_t</title>
+<g id="a_type~~graph~~TypeGraph_node39"><a xlink:href=".././type/advection_diffusion_2d_t.html" xlink:title="advection_diffusion_2d_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3008,-486 2864,-486 2864,-462 3008,-462 3008,-486"/>
+<text text-anchor="middle" x="2936" y="-471.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">advection_diffusion_2d_t</text>
+</a>
+</g>
+</g>
+<!-- type~advection_diffusion_2d&#45;&gt;type~advection_diffusion_2d_t -->
+<g id="type~~graph~~TypeGraph_edge21" class="edge">
+<title>type~advection_diffusion_2d&#45;&gt;type~advection_diffusion_2d_t</title>
+<path fill="none" stroke="#f9ff00" d="M3058.94,-545.98C3048.3,-543.26 3037.24,-540.21 3027,-537"/>
+</g>
+<!-- type~nulldgmodel1d -->
+<g id="type~~graph~~TypeGraph_node18" class="node">
+<title>type~nulldgmodel1d</title>
+<g id="a_type~~graph~~TypeGraph_node18"><a xlink:href=".././type/nulldgmodel1d.html" xlink:title="NullDGModel1D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3161,-66 3064,-66 3064,-42 3161,-42 3161,-66"/>
+<text text-anchor="middle" x="3112.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">NullDGModel1D</text>
+</a>
+</g>
+</g>
+<!-- type~nulldgmodel1d_t -->
+<g id="type~~graph~~TypeGraph_node36" class="node">
+<title>type~nulldgmodel1d_t</title>
+<g id="a_type~~graph~~TypeGraph_node36"><a xlink:href=".././type/nulldgmodel1d_t.html" xlink:title="NullDGModel1D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2989,-100 2883,-100 2883,-76 2989,-76 2989,-100"/>
+<text text-anchor="middle" x="2936" y="-85.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">NullDGModel1D_t</text>
+</a>
+</g>
+</g>
+<!-- type~nulldgmodel1d&#45;&gt;type~nulldgmodel1d_t -->
+<g id="type~~graph~~TypeGraph_edge22" class="edge">
+<title>type~nulldgmodel1d&#45;&gt;type~nulldgmodel1d_t</title>
+<path fill="none" stroke="#e9ff00" d="M3063.83,-49.08C3051.61,-49.15 3038.63,-50.41 3027,-54"/>
+</g>
+<!-- type~mappedscalar3d~2 -->
+<g id="type~~graph~~TypeGraph_node19" class="node">
+<title>type~mappedscalar3d~2</title>
+<g id="a_type~~graph~~TypeGraph_node19"><a xlink:href=".././type/mappedscalar3d~2.html" xlink:title="MappedScalar3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2256,-711 2152,-711 2152,-687 2256,-687 2256,-711"/>
+<text text-anchor="middle" x="2204" y="-696.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedScalar3D</text>
+</a>
+</g>
+</g>
+<!-- type~mappedscalar3d_t -->
+<g id="type~~graph~~TypeGraph_node31" class="node">
+<title>type~mappedscalar3d_t</title>
+<g id="a_type~~graph~~TypeGraph_node31"><a xlink:href=".././type/mappedscalar3d_t.html" xlink:title="MappedScalar3D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2061,-576 1948,-576 1948,-552 2061,-552 2061,-576"/>
+<text text-anchor="middle" x="2004.5" y="-561.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedScalar3D_t</text>
+</a>
+</g>
+</g>
+<!-- type~mappedscalar3d~2&#45;&gt;type~mappedscalar3d_t -->
+<g id="type~~graph~~TypeGraph_edge24" class="edge">
+<title>type~mappedscalar3d~2&#45;&gt;type~mappedscalar3d_t</title>
+<path fill="none" stroke="#d9ff00" d="M2163.4,-686.91C2159.19,-684.45 2155.26,-681.51 2152,-678 2134.5,-659.15 2151.12,-642.19 2134,-623 2115.61,-602.38 2088.55,-588.49 2064,-579.39"/>
+<polygon fill="#d9ff00" stroke="#d9ff00" points="2064.97,-576.02 2054.38,-576.02 2062.66,-582.63 2064.97,-576.02"/>
+</g>
+<!-- type~mappedscalar3d~2&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge23" class="edge">
+<title>type~mappedscalar3d~2&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#d9ff00" stroke-dasharray="5,2" d="M2169.63,-711.02C2163.6,-713.67 2157.49,-716.68 2152,-720 2106.89,-747.24 2109.8,-776.12 2061,-796 1990.81,-824.59 1444.88,-808.23 1381,-849 1367.25,-857.78 1378.97,-884.33 1363,-881"/>
+<path fill="none" stroke="#d9ff00" stroke-dasharray="5,2" d="M1362,-881C1041.66,-805.62 951.87,-845.89 626,-800 597.42,-795.98 590.85,-788.22 562,-789"/>
+<text text-anchor="middle" x="1453" y="-851.4" font-family="Helvetica,sans-Serif" font-size="9.50">jas_gpu</text>
+</g>
+<!-- type~tensor3d_t -->
+<g id="type~~graph~~TypeGraph_node20" class="node">
+<title>type~tensor3d_t</title>
+<g id="a_type~~graph~~TypeGraph_node20"><a xlink:href=".././type/tensor3d_t.html" xlink:title="Tensor3D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1488.5,-583 1417.5,-583 1417.5,-559 1488.5,-559 1488.5,-583"/>
+<text text-anchor="middle" x="1453" y="-568.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Tensor3D_t</text>
+</a>
+</g>
+</g>
+<!-- type~self_dataobj -->
+<g id="type~~graph~~TypeGraph_node26" class="node">
+<title>type~self_dataobj</title>
+<g id="a_type~~graph~~TypeGraph_node26"><a xlink:href=".././type/self_dataobj.html" xlink:title="SELF_DataObj">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1344,-434 1257,-434 1257,-410 1344,-410 1344,-434"/>
+<text text-anchor="middle" x="1300.5" y="-419.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">SELF_DataObj</text>
+</a>
+</g>
+</g>
+<!-- type~tensor3d_t&#45;&gt;type~self_dataobj -->
+<g id="type~~graph~~TypeGraph_edge25" class="edge">
+<title>type~tensor3d_t&#45;&gt;type~self_dataobj</title>
+<path fill="none" stroke="#c8ff00" d="M1428.8,-558.83C1409.03,-547.45 1381.04,-528.81 1363,-506"/>
+<path fill="none" stroke="#c8ff00" d="M1362,-506C1345.45,-485.06 1327.74,-460.15 1315.79,-442.92"/>
+<polygon fill="#c8ff00" stroke="#c8ff00" points="1318.34,-440.46 1309.79,-434.21 1312.58,-444.43 1318.34,-440.46"/>
+</g>
+<!-- type~tensor2d_t -->
+<g id="type~~graph~~TypeGraph_node21" class="node">
+<title>type~tensor2d_t</title>
+<g id="a_type~~graph~~TypeGraph_node21"><a xlink:href=".././type/tensor2d_t.html" xlink:title="Tensor2D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1488.5,-503 1417.5,-503 1417.5,-479 1488.5,-479 1488.5,-503"/>
+<text text-anchor="middle" x="1453" y="-488.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Tensor2D_t</text>
+</a>
+</g>
+</g>
+<!-- type~tensor2d_t&#45;&gt;type~self_dataobj -->
+<g id="type~~graph~~TypeGraph_edge26" class="edge">
+<title>type~tensor2d_t&#45;&gt;type~self_dataobj</title>
+<path fill="none" stroke="#b8ff00" d="M1437.48,-478.81C1413.45,-458.77 1367.62,-421.03 1363,-421"/>
+</g>
+<!-- type~mappedscalar3d -->
+<g id="type~~graph~~TypeGraph_node22" class="node">
+<title>type~mappedscalar3d</title>
+<g id="a_type~~graph~~TypeGraph_node22"><a xlink:href=".././type/mappedscalar3d.html" xlink:title="MappedScalar3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2256,-547 2152,-547 2152,-523 2256,-523 2256,-547"/>
+<text text-anchor="middle" x="2204" y="-532.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedScalar3D</text>
+</a>
+</g>
+</g>
+<!-- type~mappedscalar3d&#45;&gt;type~mappedscalar3d_t -->
+<g id="type~~graph~~TypeGraph_edge27" class="edge">
+<title>type~mappedscalar3d&#45;&gt;type~mappedscalar3d_t</title>
+<path fill="none" stroke="#a8ff00" d="M2151.88,-542.51C2127.36,-546.11 2097.69,-550.46 2071.49,-554.31"/>
+<polygon fill="#a8ff00" stroke="#a8ff00" points="2070.65,-550.9 2061.26,-555.81 2071.66,-557.82 2070.65,-550.9"/>
+</g>
+<!-- type~advection_diffusion_1d -->
+<g id="type~~graph~~TypeGraph_node23" class="node">
+<title>type~advection_diffusion_1d</title>
+<g id="a_type~~graph~~TypeGraph_node23"><a xlink:href=".././type/advection_diffusion_1d.html" xlink:title="advection_diffusion_1d">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3180,-108 3045,-108 3045,-84 3180,-84 3180,-108"/>
+<text text-anchor="middle" x="3112.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">advection_diffusion_1d</text>
+</a>
+</g>
+</g>
+<!-- type~advection_diffusion_1d&#45;&gt;type~advection_diffusion_1d_t -->
+<g id="type~~graph~~TypeGraph_edge28" class="edge">
+<title>type~advection_diffusion_1d&#45;&gt;type~advection_diffusion_1d_t</title>
+<path fill="none" stroke="#97ff00" d="M3062.12,-108.14C3056.11,-110.6 3050.25,-113.53 3045,-117 3034.74,-123.78 3038.75,-134.37 3027,-138"/>
+<path fill="none" stroke="#97ff00" d="M3026,-138C3009.12,-143.21 2990.83,-150 2975.24,-156.13"/>
+<polygon fill="#97ff00" stroke="#97ff00" points="2973.92,-152.89 2965.93,-159.85 2976.51,-159.39 2973.92,-152.89"/>
+</g>
+<!-- type~vector2d_t -->
+<g id="type~~graph~~TypeGraph_node72" class="node">
+<title>type~vector2d_t</title>
+<g id="a_type~~graph~~TypeGraph_node72"><a xlink:href=".././type/vector2d_t.html" xlink:title="Vector2D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1488,-301 1418,-301 1418,-277 1488,-277 1488,-301"/>
+<text text-anchor="middle" x="1453" y="-286.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Vector2D_t</text>
+</a>
+</g>
+</g>
+<!-- type~vector2d&#45;&gt;type~vector2d_t -->
+<g id="type~~graph~~TypeGraph_edge29" class="edge">
+<title>type~vector2d&#45;&gt;type~vector2d_t</title>
+<path fill="none" stroke="#87ff00" d="M1598.9,-290.66C1571.38,-290.35 1530.01,-289.87 1498.51,-289.51"/>
+<polygon fill="#87ff00" stroke="#87ff00" points="1498.28,-286.01 1488.24,-289.39 1498.2,-293.01 1498.28,-286.01"/>
+</g>
+<!-- type~nulldgmodel1d~2 -->
+<g id="type~~graph~~TypeGraph_node25" class="node">
+<title>type~nulldgmodel1d~2</title>
+<g id="a_type~~graph~~TypeGraph_node25"><a xlink:href=".././type/nulldgmodel1d~2.html" xlink:title="NullDGModel1D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3161,-24 3064,-24 3064,0 3161,0 3161,-24"/>
+<text text-anchor="middle" x="3112.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">NullDGModel1D</text>
+</a>
+</g>
+</g>
+<!-- type~nulldgmodel1d~2&#45;&gt;type~nulldgmodel1d_t -->
+<g id="type~~graph~~TypeGraph_edge30" class="edge">
+<title>type~nulldgmodel1d~2&#45;&gt;type~nulldgmodel1d_t</title>
+<path fill="none" stroke="#77ff00" d="M3063.86,-23.44C3057.25,-26.04 3050.76,-29.19 3045,-33 3034.74,-39.78 3038.75,-50.37 3027,-54"/>
+<path fill="none" stroke="#77ff00" d="M3026,-54C3009.12,-59.21 2990.83,-66 2975.24,-72.13"/>
+<polygon fill="#77ff00" stroke="#77ff00" points="2973.92,-68.89 2965.93,-75.85 2976.51,-75.39 2973.92,-68.89"/>
+</g>
+<!-- type~lagrange -->
+<g id="type~~graph~~TypeGraph_node50" class="node">
+<title>type~lagrange</title>
+<g id="a_type~~graph~~TypeGraph_node50"><a xlink:href=".././type/lagrange.html" xlink:title="Lagrange">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="593,-629 529,-629 529,-605 593,-605 593,-629"/>
+<text text-anchor="middle" x="561" y="-614.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Lagrange</text>
+</a>
+</g>
+</g>
+<!-- type~self_dataobj&#45;&gt;type~lagrange -->
+<g id="type~~graph~~TypeGraph_edge31" class="edge">
+<title>type~self_dataobj&#45;&gt;type~lagrange</title>
+<path fill="none" stroke="#67ff00" stroke-dasharray="5,2" d="M1264.34,-434.06C1256.11,-436.43 1247.32,-438.61 1239,-440 1205.38,-445.6 651.23,-442.08 626,-465 582.5,-504.52 643.08,-548.85 608,-596 606.23,-598.38 604.13,-600.49 601.81,-602.37"/>
+<polygon fill="#67ff00" stroke="#67ff00" points="599.77,-599.53 593.28,-607.91 603.58,-605.4 599.77,-599.53"/>
+<text text-anchor="middle" x="932.5" y="-467.4" font-family="Helvetica,sans-Serif" font-size="9.50">interp</text>
+</g>
+<!-- type~metadata -->
+<g id="type~~graph~~TypeGraph_node65" class="node">
+<title>type~metadata</title>
+<g id="a_type~~graph~~TypeGraph_node65"><a xlink:href=".././type/metadata.html" xlink:title="Metadata">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="592.5,-397 529.5,-397 529.5,-373 592.5,-373 592.5,-397"/>
+<text text-anchor="middle" x="561" y="-382.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Metadata</text>
+</a>
+</g>
+</g>
+<!-- type~self_dataobj&#45;&gt;type~metadata -->
+<g id="type~~graph~~TypeGraph_edge32" class="edge">
+<title>type~self_dataobj&#45;&gt;type~metadata</title>
+<path fill="none" stroke="#67ff00" stroke-dasharray="5,2" d="M1256.72,-411.02C1250.8,-409.82 1244.77,-408.76 1239,-408 999.45,-376.52 708.38,-380.75 602.75,-383.65"/>
+<polygon fill="#67ff00" stroke="#67ff00" points="602.43,-380.16 592.54,-383.95 602.63,-387.16 602.43,-380.16"/>
+<text text-anchor="middle" x="932.5" y="-410.4" font-family="Helvetica,sans-Serif" font-size="9.50">meta</text>
+</g>
+<!-- EquationParser -->
+<g id="type~~graph~~TypeGraph_node96" class="node">
+<title>EquationParser</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="608,-439 514,-439 514,-415 608,-415 608,-439"/>
+<text text-anchor="middle" x="561" y="-424.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">EquationParser</text>
+</g>
+<!-- type~self_dataobj&#45;&gt;EquationParser -->
+<g id="type~~graph~~TypeGraph_edge33" class="edge">
+<title>type~self_dataobj&#45;&gt;EquationParser</title>
+<path fill="none" stroke="#67ff00" stroke-dasharray="5,2" d="M1256.93,-422.29C1131.09,-423.14 760.77,-425.65 618.53,-426.62"/>
+<polygon fill="#67ff00" stroke="#67ff00" points="618.27,-423.12 608.29,-426.69 618.32,-430.12 618.27,-423.12"/>
+<text text-anchor="middle" x="932.5" y="-428.4" font-family="Helvetica,sans-Serif" font-size="9.50">eqn</text>
+</g>
+<!-- type~vector3d -->
+<g id="type~~graph~~TypeGraph_node27" class="node">
+<title>type~vector3d</title>
+<g id="a_type~~graph~~TypeGraph_node27"><a xlink:href=".././type/vector3d.html" xlink:title="Vector3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660,-681 1599,-681 1599,-657 1660,-657 1660,-681"/>
+<text text-anchor="middle" x="1629.5" y="-666.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Vector3D</text>
+</a>
+</g>
+</g>
+<!-- type~vector3d_t -->
+<g id="type~~graph~~TypeGraph_node83" class="node">
+<title>type~vector3d_t</title>
+<g id="a_type~~graph~~TypeGraph_node83"><a xlink:href=".././type/vector3d_t.html" xlink:title="Vector3D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1488,-667 1418,-667 1418,-643 1488,-643 1488,-667"/>
+<text text-anchor="middle" x="1453" y="-652.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Vector3D_t</text>
+</a>
+</g>
+</g>
+<!-- type~vector3d&#45;&gt;type~vector3d_t -->
+<g id="type~~graph~~TypeGraph_edge34" class="edge">
+<title>type~vector3d&#45;&gt;type~vector3d_t</title>
+<path fill="none" stroke="#56ff00" d="M1598.9,-666.63C1571.38,-664.42 1530.01,-661.1 1498.51,-658.57"/>
+<polygon fill="#56ff00" stroke="#56ff00" points="1498.49,-655.06 1488.24,-657.75 1497.93,-662.04 1498.49,-655.06"/>
+</g>
+<!-- type~dgmodel2d~2 -->
+<g id="type~~graph~~TypeGraph_node28" class="node">
+<title>type~dgmodel2d~2</title>
+<g id="a_type~~graph~~TypeGraph_node28"><a xlink:href=".././type/dgmodel2d~2.html" xlink:title="DGModel2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2827,-471 2751,-471 2751,-447 2827,-447 2827,-471"/>
+<text text-anchor="middle" x="2789" y="-456.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DGModel2D</text>
+</a>
+</g>
+</g>
+<!-- type~dgmodel2d_t -->
+<g id="type~~graph~~TypeGraph_node51" class="node">
+<title>type~dgmodel2d_t</title>
+<g id="a_type~~graph~~TypeGraph_node51"><a xlink:href=".././type/dgmodel2d_t.html" xlink:title="DGModel2D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2714,-467 2629,-467 2629,-443 2714,-443 2714,-467"/>
+<text text-anchor="middle" x="2671.5" y="-452.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DGModel2D_t</text>
+</a>
+</g>
+</g>
+<!-- type~dgmodel2d~2&#45;&gt;type~dgmodel2d_t -->
+<g id="type~~graph~~TypeGraph_edge35" class="edge">
+<title>type~dgmodel2d~2&#45;&gt;type~dgmodel2d_t</title>
+<path fill="none" stroke="#46ff00" d="M2750.91,-457.53C2744.9,-457.72 2738.76,-458.16 2733,-459"/>
+</g>
+<!-- type~vector3d~2 -->
+<g id="type~~graph~~TypeGraph_node29" class="node">
+<title>type~vector3d~2</title>
+<g id="a_type~~graph~~TypeGraph_node29"><a xlink:href=".././type/vector3d~2.html" xlink:title="Vector3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660,-723 1599,-723 1599,-699 1660,-699 1660,-723"/>
+<text text-anchor="middle" x="1629.5" y="-708.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Vector3D</text>
+</a>
+</g>
+</g>
+<!-- type~vector3d~2&#45;&gt;type~vector3d_t -->
+<g id="type~~graph~~TypeGraph_edge37" class="edge">
+<title>type~vector3d~2&#45;&gt;type~vector3d_t</title>
+<path fill="none" stroke="#36ff00" d="M1599,-712.21C1582.69,-712.4 1562.12,-711.86 1544,-709"/>
+<path fill="none" stroke="#36ff00" d="M1543,-709C1532.99,-707.42 1533.44,-700.61 1525,-695 1512.8,-686.88 1498.84,-678.78 1486.56,-672.02"/>
+<polygon fill="#36ff00" stroke="#36ff00" points="1488,-668.82 1477.54,-667.13 1484.66,-674.97 1488,-668.82"/>
+</g>
+<!-- type~vector3d~2&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge36" class="edge">
+<title>type~vector3d~2&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#36ff00" stroke-dasharray="5,2" d="M1543,-709C1139.88,-645.35 1010.9,-621.33 626,-757 616.69,-760.28 616.62,-765.19 608,-770 588.68,-780.77 584.12,-788.85 562,-789"/>
+<path fill="none" stroke="#36ff00" stroke-dasharray="5,2" d="M560,-789C356.27,-789.64 272.78,-881.09 102,-770"/>
+<text text-anchor="middle" x="932.5" y="-759.4" font-family="Helvetica,sans-Serif" font-size="9.50">blas_handle, interior_gpu, boundary_gpu, extBoundary_gpu, avgBoundary_gpu, boundaryNormal_gpu, interpWork1, interpWork2</text>
+</g>
+<!-- type~dgmodel3d_t -->
+<g id="type~~graph~~TypeGraph_node71" class="node">
+<title>type~dgmodel3d_t</title>
+<g id="a_type~~graph~~TypeGraph_node71"><a xlink:href=".././type/dgmodel3d_t.html" xlink:title="DGModel3D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2714,-706 2629,-706 2629,-682 2714,-682 2714,-706"/>
+<text text-anchor="middle" x="2671.5" y="-691.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DGModel3D_t</text>
+</a>
+</g>
+</g>
+<!-- type~dgmodel3d&#45;&gt;type~dgmodel3d_t -->
+<g id="type~~graph~~TypeGraph_edge38" class="edge">
+<title>type~dgmodel3d&#45;&gt;type~dgmodel3d_t</title>
+<path fill="none" stroke="#25ff00" d="M2767.02,-702.91C2757.05,-698.24 2744.75,-694 2733,-694"/>
+</g>
+<!-- type~mappedscalar3d_t&#45;&gt;type~scalar3d -->
+<g id="type~~graph~~TypeGraph_edge40" class="edge">
+<title>type~mappedscalar3d_t&#45;&gt;type~scalar3d</title>
+<path fill="none" stroke="#15ff00" d="M1947.66,-554.57C1871.46,-541.7 1736.78,-518.95 1670.13,-507.69"/>
+<polygon fill="#15ff00" stroke="#15ff00" points="1670.48,-504.2 1660.04,-505.99 1669.32,-511.11 1670.48,-504.2"/>
+</g>
+<!-- type~semhex -->
+<g id="type~~graph~~TypeGraph_node91" class="node">
+<title>type~semhex</title>
+<g id="a_type~~graph~~TypeGraph_node91"><a xlink:href=".././type/semhex.html" xlink:title="SEMHex">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1853,-598 1798,-598 1798,-574 1853,-574 1853,-598"/>
+<text text-anchor="middle" x="1825.5" y="-583.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">SEMHex</text>
+</a>
+</g>
+</g>
+<!-- type~mappedscalar3d_t&#45;&gt;type~semhex -->
+<g id="type~~graph~~TypeGraph_edge39" class="edge">
+<title>type~mappedscalar3d_t&#45;&gt;type~semhex</title>
+<path fill="none" stroke="#15ff00" stroke-dasharray="5,2" d="M1947.9,-564.24C1927.68,-565 1904.71,-566.64 1884,-570 1877.13,-571.11 1869.9,-572.75 1862.98,-574.55"/>
+<polygon fill="#15ff00" stroke="#15ff00" points="1861.85,-571.23 1853.14,-577.26 1863.71,-577.98 1861.85,-571.23"/>
+<text text-anchor="middle" x="1907" y="-572.4" font-family="Helvetica,sans-Serif" font-size="9.50">geometry</text>
+</g>
+<!-- type~domaindecomposition -->
+<g id="type~~graph~~TypeGraph_node32" class="node">
+<title>type~domaindecomposition</title>
+<g id="a_type~~graph~~TypeGraph_node32"><a xlink:href=".././type/domaindecomposition.html" xlink:title="DomainDecomposition">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1697,-765 1562,-765 1562,-741 1697,-741 1697,-765"/>
+<text text-anchor="middle" x="1629.5" y="-750.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DomainDecomposition</text>
+</a>
+</g>
+</g>
+<!-- type~domaindecomposition&#45;&gt;type~domaindecomposition_t -->
+<g id="type~~graph~~TypeGraph_edge41" class="edge">
+<title>type~domaindecomposition&#45;&gt;type~domaindecomposition_t</title>
+<path fill="none" stroke="#05ff00" d="M1561.53,-751.46C1552.97,-751.27 1544.12,-751.07 1535.36,-750.87"/>
+<polygon fill="#05ff00" stroke="#05ff00" points="1535.21,-747.36 1525.13,-750.63 1535.05,-754.36 1535.21,-747.36"/>
+</g>
+<!-- type~lagrange_t -->
+<g id="type~~graph~~TypeGraph_node33" class="node">
+<title>type~lagrange_t</title>
+<g id="a_type~~graph~~TypeGraph_node33"><a xlink:href=".././type/lagrange_t.html" xlink:title="Lagrange_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="349,-629 276,-629 276,-605 349,-605 349,-629"/>
+<text text-anchor="middle" x="312.5" y="-614.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Lagrange_t</text>
+</a>
+</g>
+</g>
+<!-- type~lagrange_t&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge42" class="edge">
+<title>type~lagrange_t&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#00ff0a" stroke-dasharray="5,2" d="M275.88,-617C221.65,-617 118.91,-617 64.28,-617"/>
+<polygon fill="#00ff0a" stroke="#00ff0a" points="64.03,-613.5 54.03,-617 64.03,-620.5 64.03,-613.5"/>
+<text text-anchor="middle" x="101" y="-619.4" font-family="Helvetica,sans-Serif" font-size="9.50">blas_handle</text>
+</g>
+<!-- type~tensor2d -->
+<g id="type~~graph~~TypeGraph_node34" class="node">
+<title>type~tensor2d</title>
+<g id="a_type~~graph~~TypeGraph_node34"><a xlink:href=".././type/tensor2d.html" xlink:title="Tensor2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660.5,-471 1598.5,-471 1598.5,-447 1660.5,-447 1660.5,-471"/>
+<text text-anchor="middle" x="1629.5" y="-456.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Tensor2D</text>
+</a>
+</g>
+</g>
+<!-- type~tensor2d&#45;&gt;type~tensor2d_t -->
+<g id="type~~graph~~TypeGraph_edge43" class="edge">
+<title>type~tensor2d&#45;&gt;type~tensor2d_t</title>
+<path fill="none" stroke="#00ff1b" d="M1598.1,-464.57C1570.64,-469.61 1529.88,-477.09 1498.71,-482.8"/>
+<polygon fill="#00ff1b" stroke="#00ff1b" points="1497.74,-479.42 1488.53,-484.67 1499,-486.31 1497.74,-479.42"/>
+</g>
+<!-- type~nulldgmodel1d_t&#45;&gt;type~dgmodel1d -->
+<g id="type~~graph~~TypeGraph_edge44" class="edge">
+<title>type~nulldgmodel1d_t&#45;&gt;type~dgmodel1d</title>
+<path fill="none" stroke="#00ff3b" d="M2917.54,-100.01C2901.82,-111.56 2878.94,-130.28 2864,-151 2852.12,-167.47 2865.74,-188.22 2846,-193"/>
+<path fill="none" stroke="#00ff3b" d="M2845,-193C2842.51,-193.6 2839.94,-194.15 2837.33,-194.63"/>
+<polygon fill="#00ff3b" stroke="#00ff3b" points="2836.53,-191.22 2827.21,-196.26 2837.64,-198.13 2836.53,-191.22"/>
+</g>
+<!-- type~tensor3d -->
+<g id="type~~graph~~TypeGraph_node37" class="node">
+<title>type~tensor3d</title>
+<g id="a_type~~graph~~TypeGraph_node37"><a xlink:href=".././type/tensor3d.html" xlink:title="Tensor3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660.5,-597 1598.5,-597 1598.5,-573 1660.5,-573 1660.5,-597"/>
+<text text-anchor="middle" x="1629.5" y="-582.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Tensor3D</text>
+</a>
+</g>
+</g>
+<!-- type~tensor3d&#45;&gt;type~tensor3d_t -->
+<g id="type~~graph~~TypeGraph_edge45" class="edge">
+<title>type~tensor3d&#45;&gt;type~tensor3d_t</title>
+<path fill="none" stroke="#00ff4b" d="M1598.1,-582.56C1570.64,-580.36 1529.88,-577.09 1498.71,-574.59"/>
+<polygon fill="#00ff4b" stroke="#00ff4b" points="1498.78,-571.08 1488.53,-573.77 1498.22,-578.06 1498.78,-571.08"/>
+</g>
+<!-- type~tensor3d~2 -->
+<g id="type~~graph~~TypeGraph_node38" class="node">
+<title>type~tensor3d~2</title>
+<g id="a_type~~graph~~TypeGraph_node38"><a xlink:href=".././type/tensor3d~2.html" xlink:title="Tensor3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660.5,-639 1598.5,-639 1598.5,-615 1660.5,-615 1660.5,-639"/>
+<text text-anchor="middle" x="1629.5" y="-624.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Tensor3D</text>
+</a>
+</g>
+</g>
+<!-- type~tensor3d~2&#45;&gt;type~tensor3d_t -->
+<g id="type~~graph~~TypeGraph_edge47" class="edge">
+<title>type~tensor3d~2&#45;&gt;type~tensor3d_t</title>
+<path fill="none" stroke="#00ff5c" d="M1598.35,-621.5C1582.21,-618.5 1562,-614.66 1544,-611"/>
+<path fill="none" stroke="#00ff5c" d="M1543,-611C1533.07,-608.98 1533.86,-601.91 1525,-597 1516.56,-592.32 1507.12,-588.19 1497.94,-584.67"/>
+<polygon fill="#00ff5c" stroke="#00ff5c" points="1499.13,-581.38 1488.53,-581.23 1496.72,-587.95 1499.13,-581.38"/>
+</g>
+<!-- type~tensor3d~2&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge46" class="edge">
+<title>type~tensor3d~2&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#00ff5c" stroke-dasharray="5,2" d="M1543,-611C1442.87,-590.63 727.41,-554.5 626,-542 597.36,-538.47 590.86,-530.99 562,-531"/>
+<text text-anchor="middle" x="932.5" y="-585.4" font-family="Helvetica,sans-Serif" font-size="9.50">blas_handle, interior_gpu, boundary_gpu, extBoundary_gpu</text>
+</g>
+<!-- type~advection_diffusion_2d_t&#45;&gt;type~dgmodel2d -->
+<g id="type~~graph~~TypeGraph_edge48" class="edge">
+<title>type~advection_diffusion_2d_t&#45;&gt;type~dgmodel2d</title>
+<path fill="none" stroke="#00ff6c" d="M2879.18,-461.87C2873.78,-459.43 2868.6,-456.51 2864,-453 2851.94,-443.8 2861.16,-423.43 2846,-424"/>
+</g>
+<!-- type~burgers1d_t&#45;&gt;type~dgmodel1d -->
+<g id="type~~graph~~TypeGraph_edge49" class="edge">
+<title>type~burgers1d_t&#45;&gt;type~dgmodel1d</title>
+<path fill="none" stroke="#00ff7c" d="M2898.83,-201.98C2878.82,-196.03 2856.03,-190.57 2846,-193"/>
+</g>
+<!-- type~nulldgmodel2d_t&#45;&gt;type~dgmodel2d -->
+<g id="type~~graph~~TypeGraph_edge50" class="edge">
+<title>type~nulldgmodel2d_t&#45;&gt;type~dgmodel2d</title>
+<path fill="none" stroke="#00ff8d" d="M2882.82,-425.07C2870.74,-424.09 2857.94,-423.55 2846,-424"/>
+</g>
+<!-- type~mesh3d -->
+<g id="type~~graph~~TypeGraph_node42" class="node">
+<title>type~mesh3d</title>
+<g id="a_type~~graph~~TypeGraph_node42"><a xlink:href=".././type/mesh3d.html" xlink:title="Mesh3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2231.5,-904 2176.5,-904 2176.5,-880 2231.5,-880 2231.5,-904"/>
+<text text-anchor="middle" x="2204" y="-889.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Mesh3D</text>
+</a>
+</g>
+</g>
+<!-- type~mesh3d_t -->
+<g id="type~~graph~~TypeGraph_node76" class="node">
+<title>type~mesh3d_t</title>
+<g id="a_type~~graph~~TypeGraph_node76"><a xlink:href=".././type/mesh3d_t.html" xlink:title="Mesh3D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2036.5,-905 1972.5,-905 1972.5,-881 2036.5,-881 2036.5,-905"/>
+<text text-anchor="middle" x="2004.5" y="-890.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Mesh3D_t</text>
+</a>
+</g>
+</g>
+<!-- type~mesh3d&#45;&gt;type~mesh3d_t -->
+<g id="type~~graph~~TypeGraph_edge51" class="edge">
+<title>type~mesh3d&#45;&gt;type~mesh3d_t</title>
+<path fill="none" stroke="#00ff9d" d="M2176.36,-892.13C2143.16,-892.3 2086.04,-892.59 2047.06,-892.79"/>
+<polygon fill="#00ff9d" stroke="#00ff9d" points="2046.56,-889.29 2036.58,-892.84 2046.6,-896.29 2046.56,-889.29"/>
+</g>
+<!-- type~scalar2d_t -->
+<g id="type~~graph~~TypeGraph_node43" class="node">
+<title>type~scalar2d_t</title>
+<g id="a_type~~graph~~TypeGraph_node43"><a xlink:href=".././type/scalar2d_t.html" xlink:title="Scalar2D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1488,-381 1418,-381 1418,-357 1488,-357 1488,-381"/>
+<text text-anchor="middle" x="1453" y="-366.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Scalar2D_t</text>
+</a>
+</g>
+</g>
+<!-- type~scalar2d_t&#45;&gt;type~self_dataobj -->
+<g id="type~~graph~~TypeGraph_edge52" class="edge">
+<title>type~scalar2d_t&#45;&gt;type~self_dataobj</title>
+<path fill="none" stroke="#00ffad" d="M1417.75,-373.68C1405.2,-376.72 1391.51,-381.74 1381,-390 1368.47,-399.85 1378.93,-421.11 1363,-421"/>
+<path fill="none" stroke="#00ffad" d="M1362,-421C1359.47,-420.98 1356.89,-420.98 1354.27,-420.98"/>
+<polygon fill="#00ffad" stroke="#00ffad" points="1354.11,-417.48 1344.14,-421.05 1354.16,-424.48 1354.11,-417.48"/>
+</g>
+<!-- type~nulldgmodel3d -->
+<g id="type~~graph~~TypeGraph_node44" class="node">
+<title>type~nulldgmodel3d</title>
+<g id="a_type~~graph~~TypeGraph_node44"><a xlink:href=".././type/nulldgmodel3d.html" xlink:title="NullDGModel3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3161,-748 3064,-748 3064,-724 3161,-724 3161,-748"/>
+<text text-anchor="middle" x="3112.5" y="-733.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">NullDGModel3D</text>
+</a>
+</g>
+</g>
+<!-- type~nulldgmodel3d_t -->
+<g id="type~~graph~~TypeGraph_node62" class="node">
+<title>type~nulldgmodel3d_t</title>
+<g id="a_type~~graph~~TypeGraph_node62"><a xlink:href=".././type/nulldgmodel3d_t.html" xlink:title="NullDGModel3D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2989,-727 2883,-727 2883,-703 2989,-703 2989,-727"/>
+<text text-anchor="middle" x="2936" y="-712.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">NullDGModel3D_t</text>
+</a>
+</g>
+</g>
+<!-- type~nulldgmodel3d&#45;&gt;type~nulldgmodel3d_t -->
+<g id="type~~graph~~TypeGraph_edge53" class="edge">
+<title>type~nulldgmodel3d&#45;&gt;type~nulldgmodel3d_t</title>
+<path fill="none" stroke="#00ffbd" d="M3063.82,-727.56C3051.84,-726.05 3038.98,-724.97 3027,-725"/>
+</g>
+<!-- type~mappedvector2d -->
+<g id="type~~graph~~TypeGraph_node45" class="node">
+<title>type~mappedvector2d</title>
+<g id="a_type~~graph~~TypeGraph_node45"><a xlink:href=".././type/mappedvector2d.html" xlink:title="MappedVector2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2256,-387 2152,-387 2152,-363 2256,-363 2256,-387"/>
+<text text-anchor="middle" x="2204" y="-372.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedVector2D</text>
+</a>
+</g>
+</g>
+<!-- type~mappedvector2d&#45;&gt;type~mappedvector2d_t -->
+<g id="type~~graph~~TypeGraph_edge54" class="edge">
+<title>type~mappedvector2d&#45;&gt;type~mappedvector2d_t</title>
+<path fill="none" stroke="#00ffce" d="M2167.62,-362.93C2149.81,-357.86 2127.75,-353.1 2107.5,-353"/>
+</g>
+<!-- type~model -->
+<g id="type~~graph~~TypeGraph_node46" class="node">
+<title>type~model</title>
+<g id="a_type~~graph~~TypeGraph_node46"><a xlink:href=".././type/model.html" xlink:title="Model">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2231,-467 2177,-467 2177,-443 2231,-443 2231,-467"/>
+<text text-anchor="middle" x="2204" y="-452.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Model</text>
+</a>
+</g>
+</g>
+<!-- type~scalar2d&#45;&gt;type~scalar2d_t -->
+<g id="type~~graph~~TypeGraph_edge55" class="edge">
+<title>type~scalar2d&#45;&gt;type~scalar2d_t</title>
+<path fill="none" stroke="#00ffee" d="M1598.9,-339.11C1571.26,-344.81 1529.65,-353.39 1498.1,-359.9"/>
+<polygon fill="#00ffee" stroke="#00ffee" points="1497.33,-356.49 1488.24,-361.94 1498.74,-363.34 1497.33,-356.49"/>
+</g>
+<!-- type~dgmodel3d~2 -->
+<g id="type~~graph~~TypeGraph_node48" class="node">
+<title>type~dgmodel3d~2</title>
+<g id="a_type~~graph~~TypeGraph_node48"><a xlink:href=".././type/dgmodel3d~2.html" xlink:title="DGModel3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2827,-685 2751,-685 2751,-661 2827,-661 2827,-685"/>
+<text text-anchor="middle" x="2789" y="-670.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DGModel3D</text>
+</a>
+</g>
+</g>
+<!-- type~dgmodel3d~2&#45;&gt;type~dgmodel3d_t -->
+<g id="type~~graph~~TypeGraph_edge56" class="edge">
+<title>type~dgmodel3d~2&#45;&gt;type~dgmodel3d_t</title>
+<path fill="none" stroke="#00ffff" d="M2767.02,-685.09C2757.05,-689.76 2744.75,-694 2733,-694"/>
+<path fill="none" stroke="#00ffff" d="M2732,-694C2729.47,-694 2726.88,-694 2724.26,-694"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="2724.11,-690.5 2714.11,-694 2724.11,-697.5 2724.11,-690.5"/>
+</g>
+<!-- type~mappedvector3d_t&#45;&gt;type~vector3d -->
+<g id="type~~graph~~TypeGraph_edge58" class="edge">
+<title>type~mappedvector3d_t&#45;&gt;type~vector3d</title>
+<path fill="none" stroke="#00eeff" d="M1947.66,-634.99C1871.46,-643.16 1736.78,-657.6 1670.13,-664.75"/>
+<polygon fill="#00eeff" stroke="#00eeff" points="1669.61,-661.29 1660.04,-665.83 1670.36,-668.25 1669.61,-661.29"/>
+</g>
+<!-- type~mappedvector3d_t&#45;&gt;type~semhex -->
+<g id="type~~graph~~TypeGraph_edge57" class="edge">
+<title>type~mappedvector3d_t&#45;&gt;type~semhex</title>
+<path fill="none" stroke="#00eeff" stroke-dasharray="5,2" d="M1953.72,-616.91C1924.93,-609.91 1889.32,-601.26 1863.11,-594.89"/>
+<polygon fill="#00eeff" stroke="#00eeff" points="1863.74,-591.45 1853.2,-592.49 1862.09,-598.25 1863.74,-591.45"/>
+<text text-anchor="middle" x="1907" y="-612.4" font-family="Helvetica,sans-Serif" font-size="9.50">geometry</text>
+</g>
+<!-- type~lagrange&#45;&gt;type~lagrange_t -->
+<g id="type~~graph~~TypeGraph_edge59" class="edge">
+<title>type~lagrange&#45;&gt;type~lagrange_t</title>
+<path fill="none" stroke="#00deff" d="M528.78,-617C485.97,-617 408.72,-617 359.34,-617"/>
+<polygon fill="#00deff" stroke="#00deff" points="359.25,-613.5 349.25,-617 359.25,-620.5 359.25,-613.5"/>
+</g>
+<!-- type~dgmodel2d_t&#45;&gt;type~mesh2d -->
+<g id="type~~graph~~TypeGraph_edge62" class="edge">
+<title>type~dgmodel2d_t&#45;&gt;type~mesh2d</title>
+<path fill="none" stroke="#00ceff" stroke-dasharray="5,2" d="M2660.46,-467.33C2649.6,-479.8 2631.11,-498.69 2611,-509 2474.71,-578.87 2389.36,-480.26 2274,-581 2256.21,-596.54 2271.62,-613.28 2256,-631 2251.73,-635.84 2246.34,-639.9 2240.68,-643.27"/>
+<polygon fill="#00ceff" stroke="#00ceff" points="2238.91,-640.24 2231.68,-647.99 2242.16,-646.44 2238.91,-640.24"/>
+<text text-anchor="middle" x="2442.5" y="-583.4" font-family="Helvetica,sans-Serif" font-size="9.50">mesh</text>
+</g>
+<!-- type~dgmodel2d_t&#45;&gt;type~mappedvector2d -->
+<g id="type~~graph~~TypeGraph_edge61" class="edge">
+<title>type~dgmodel2d_t&#45;&gt;type~mappedvector2d</title>
+<path fill="none" stroke="#00ceff" stroke-dasharray="5,2" d="M2645.59,-442.91C2635.15,-438.39 2622.72,-433.69 2611,-431 2464.68,-397.39 2419.19,-446.18 2274,-408 2266.42,-406.01 2251.14,-398.83 2236.88,-391.67"/>
+<polygon fill="#00ceff" stroke="#00ceff" points="2238.26,-388.44 2227.76,-387.03 2235.08,-394.68 2238.26,-388.44"/>
+<text text-anchor="middle" x="2442.5" y="-433.4" font-family="Helvetica,sans-Serif" font-size="9.50">solutionGradient, flux</text>
+</g>
+<!-- type~dgmodel2d_t&#45;&gt;type~model -->
+<g id="type~~graph~~TypeGraph_edge64" class="edge">
+<title>type~dgmodel2d_t&#45;&gt;type~model</title>
+<path fill="none" stroke="#00ceff" d="M2441.5,-455C2370.71,-452.04 2287.9,-453.07 2241.44,-454.06"/>
+<polygon fill="#00ceff" stroke="#00ceff" points="2241.18,-450.56 2231.26,-454.28 2241.34,-457.56 2241.18,-450.56"/>
+</g>
+<!-- type~mappedscalar2d -->
+<g id="type~~graph~~TypeGraph_node64" class="node">
+<title>type~mappedscalar2d</title>
+<g id="a_type~~graph~~TypeGraph_node64"><a xlink:href=".././type/mappedscalar2d.html" xlink:title="MappedScalar2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2256,-303 2152,-303 2152,-279 2256,-279 2256,-303"/>
+<text text-anchor="middle" x="2204" y="-288.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedScalar2D</text>
+</a>
+</g>
+</g>
+<!-- type~dgmodel2d_t&#45;&gt;type~mappedscalar2d -->
+<g id="type~~graph~~TypeGraph_edge60" class="edge">
+<title>type~dgmodel2d_t&#45;&gt;type~mappedscalar2d</title>
+<path fill="none" stroke="#00ceff" stroke-dasharray="5,2" d="M2666.11,-442.8C2658.31,-423.01 2640.08,-384.19 2611,-365 2504.95,-295 2350.98,-286.47 2266.39,-287.84"/>
+<polygon fill="#00ceff" stroke="#00ceff" points="2266.09,-284.35 2256.17,-288.06 2266.24,-291.34 2266.09,-284.35"/>
+<text text-anchor="middle" x="2442.5" y="-367.4" font-family="Helvetica,sans-Serif" font-size="9.50">solution, source, fluxDivergence, dSdt, workSol</text>
+</g>
+<!-- type~dgmodel2d_t&#45;&gt;type~semquad -->
+<g id="type~~graph~~TypeGraph_edge63" class="edge">
+<title>type~dgmodel2d_t&#45;&gt;type~semquad</title>
+<path fill="none" stroke="#00ceff" stroke-dasharray="5,2" d="M2628.64,-456.05C2583.07,-456.94 2508.08,-457.7 2443.5,-455"/>
+<path fill="none" stroke="#00ceff" stroke-dasharray="5,2" d="M2441.5,-455C2366.86,-451.88 2346.79,-457.82 2274,-441 2265.64,-439.07 2264.31,-436.16 2256,-434 2182.86,-414.95 1960.29,-388.88 1867.64,-378.51"/>
+<polygon fill="#00ceff" stroke="#00ceff" points="1867.85,-375.02 1857.53,-377.39 1867.08,-381.97 1867.85,-375.02"/>
+<text text-anchor="middle" x="2106.5" y="-413.4" font-family="Helvetica,sans-Serif" font-size="9.50">geometry</text>
+</g>
+<!-- type~advection_diffusion_3d~2 -->
+<g id="type~~graph~~TypeGraph_node52" class="node">
+<title>type~advection_diffusion_3d~2</title>
+<g id="a_type~~graph~~TypeGraph_node52"><a xlink:href=".././type/advection_diffusion_3d~2.html" xlink:title="advection_diffusion_3d">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3180,-664 3045,-664 3045,-640 3180,-640 3180,-664"/>
+<text text-anchor="middle" x="3112.5" y="-649.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">advection_diffusion_3d</text>
+</a>
+</g>
+</g>
+<!-- type~advection_diffusion_3d~2&#45;&gt;type~advection_diffusion_3d_t -->
+<g id="type~~graph~~TypeGraph_edge65" class="edge">
+<title>type~advection_diffusion_3d~2&#45;&gt;type~advection_diffusion_3d_t</title>
+<path fill="none" stroke="#00bdff" d="M3044.98,-650.43C3038.89,-650.76 3032.82,-651.27 3027,-652"/>
+</g>
+<!-- type~linearshallowwater2d -->
+<g id="type~~graph~~TypeGraph_node53" class="node">
+<title>type~linearshallowwater2d</title>
+<g id="a_type~~graph~~TypeGraph_node53"><a xlink:href=".././type/linearshallowwater2d.html" xlink:title="LinearShallowWater2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3179.5,-402 3045.5,-402 3045.5,-378 3179.5,-378 3179.5,-402"/>
+<text text-anchor="middle" x="3112.5" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">LinearShallowWater2D</text>
+</a>
+</g>
+</g>
+<!-- type~linearshallowwater2d_t -->
+<g id="type~~graph~~TypeGraph_node92" class="node">
+<title>type~linearshallowwater2d_t</title>
+<g id="a_type~~graph~~TypeGraph_node92"><a xlink:href=".././type/linearshallowwater2d_t.html" xlink:title="LinearShallowWater2D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3007.5,-402 2864.5,-402 2864.5,-378 3007.5,-378 3007.5,-402"/>
+<text text-anchor="middle" x="2936" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">LinearShallowWater2D_t</text>
+</a>
+</g>
+</g>
+<!-- type~linearshallowwater2d&#45;&gt;type~linearshallowwater2d_t -->
+<g id="type~~graph~~TypeGraph_edge66" class="edge">
+<title>type~linearshallowwater2d&#45;&gt;type~linearshallowwater2d_t</title>
+<path fill="none" stroke="#00adff" d="M3045.44,-388.48C3039.2,-388.79 3032.97,-389.28 3027,-390"/>
+</g>
+<!-- type~tensor2d~2 -->
+<g id="type~~graph~~TypeGraph_node54" class="node">
+<title>type~tensor2d~2</title>
+<g id="a_type~~graph~~TypeGraph_node54"><a xlink:href=".././type/tensor2d~2.html" xlink:title="Tensor2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660.5,-555 1598.5,-555 1598.5,-531 1660.5,-531 1660.5,-555"/>
+<text text-anchor="middle" x="1629.5" y="-540.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Tensor2D</text>
+</a>
+</g>
+</g>
+<!-- type~tensor2d~2&#45;&gt;type~tensor2d_t -->
+<g id="type~~graph~~TypeGraph_edge68" class="edge">
+<title>type~tensor2d~2&#45;&gt;type~tensor2d_t</title>
+<path fill="none" stroke="#009dff" d="M1598.3,-539.26C1582.14,-537.12 1561.94,-534.23 1544,-531"/>
+<path fill="none" stroke="#009dff" d="M1543,-531C1533.03,-529.2 1533.86,-521.91 1525,-517 1516.56,-512.32 1507.12,-508.19 1497.94,-504.67"/>
+<polygon fill="#009dff" stroke="#009dff" points="1499.13,-501.38 1488.53,-501.23 1496.72,-507.95 1499.13,-501.38"/>
+</g>
+<!-- type~tensor2d~2&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge67" class="edge">
+<title>type~tensor2d~2&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#009dff" stroke-dasharray="5,2" d="M1543,-531C1435.72,-511.69 671,-531.88 562,-531"/>
+<text text-anchor="middle" x="932.5" y="-532.4" font-family="Helvetica,sans-Serif" font-size="9.50">blas_handle, interior_gpu, boundary_gpu, extBoundary_gpu</text>
+</g>
+<!-- type~mappedscalar1d~2 -->
+<g id="type~~graph~~TypeGraph_node55" class="node">
+<title>type~mappedscalar1d~2</title>
+<g id="a_type~~graph~~TypeGraph_node55"><a xlink:href=".././type/mappedscalar1d~2.html" xlink:title="MappedScalar1D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2256,-170 2152,-170 2152,-146 2256,-146 2256,-170"/>
+<text text-anchor="middle" x="2204" y="-155.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedScalar1D</text>
+</a>
+</g>
+</g>
+<!-- type~mappedscalar1d_t -->
+<g id="type~~graph~~TypeGraph_node87" class="node">
+<title>type~mappedscalar1d_t</title>
+<g id="a_type~~graph~~TypeGraph_node87"><a xlink:href=".././type/mappedscalar1d_t.html" xlink:title="MappedScalar1D_t">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2061,-170 1948,-170 1948,-146 2061,-146 2061,-170"/>
+<text text-anchor="middle" x="2004.5" y="-155.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedScalar1D_t</text>
+</a>
+</g>
+</g>
+<!-- type~mappedscalar1d~2&#45;&gt;type~mappedscalar1d_t -->
+<g id="type~~graph~~TypeGraph_edge69" class="edge">
+<title>type~mappedscalar1d~2&#45;&gt;type~mappedscalar1d_t</title>
+<path fill="none" stroke="#008dff" d="M2151.88,-158C2127.36,-158 2097.69,-158 2071.49,-158"/>
+<polygon fill="#008dff" stroke="#008dff" points="2071.26,-154.5 2061.26,-158 2071.26,-161.5 2071.26,-154.5"/>
+</g>
+<!-- type~nulldgmodel2d -->
+<g id="type~~graph~~TypeGraph_node56" class="node">
+<title>type~nulldgmodel2d</title>
+<g id="a_type~~graph~~TypeGraph_node56"><a xlink:href=".././type/nulldgmodel2d.html" xlink:title="NullDGModel2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3161,-444 3064,-444 3064,-420 3161,-420 3161,-444"/>
+<text text-anchor="middle" x="3112.5" y="-429.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">NullDGModel2D</text>
+</a>
+</g>
+</g>
+<!-- type~nulldgmodel2d&#45;&gt;type~nulldgmodel2d_t -->
+<g id="type~~graph~~TypeGraph_edge70" class="edge">
+<title>type~nulldgmodel2d&#45;&gt;type~nulldgmodel2d_t</title>
+<path fill="none" stroke="#007cff" d="M3073.81,-444.1C3055.78,-449.33 3036.16,-454.05 3027,-453"/>
+<path fill="none" stroke="#007cff" d="M3026,-453C3013.92,-451.62 3001.11,-449.18 2989.08,-446.45"/>
+<polygon fill="#007cff" stroke="#007cff" points="2989.73,-443.01 2979.19,-444.1 2988.11,-449.82 2989.73,-443.01"/>
+</g>
+<!-- type~vector2d~2 -->
+<g id="type~~graph~~TypeGraph_node57" class="node">
+<title>type~vector2d~2</title>
+<g id="a_type~~graph~~TypeGraph_node57"><a xlink:href=".././type/vector2d~2.html" xlink:title="Vector2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660,-261 1599,-261 1599,-237 1660,-237 1660,-261"/>
+<text text-anchor="middle" x="1629.5" y="-246.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Vector2D</text>
+</a>
+</g>
+</g>
+<!-- type~vector2d~2&#45;&gt;type~vector2d_t -->
+<g id="type~~graph~~TypeGraph_edge72" class="edge">
+<title>type~vector2d~2&#45;&gt;type~vector2d_t</title>
+<path fill="none" stroke="#006cff" d="M1543,-249C1532.92,-250.1 1533.86,-258.09 1525,-263 1516.48,-267.72 1506.93,-271.89 1497.67,-275.43"/>
+<polygon fill="#006cff" stroke="#006cff" points="1496.37,-272.18 1488.17,-278.89 1498.77,-278.76 1496.37,-272.18"/>
+</g>
+<!-- type~vector2d~2&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge71" class="edge">
+<title>type~vector2d~2&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#006cff" stroke-dasharray="5,2" d="M1598.69,-247.43C1582.47,-246.96 1562.08,-247.03 1544,-249"/>
+<path fill="none" stroke="#006cff" stroke-dasharray="5,2" d="M1543,-249C1408.52,-263.68 1374.19,-238.93 1239,-234 1220.2,-233.31 576.44,-205.94 562,-218"/>
+<text text-anchor="middle" x="932.5" y="-236.4" font-family="Helvetica,sans-Serif" font-size="9.50">blas_handle, interior_gpu, boundary_gpu, extBoundary_gpu, avgBoundary_gpu, boundaryNormal_gpu, interpWork</text>
+</g>
+<!-- type~mappedscalar1d -->
+<g id="type~~graph~~TypeGraph_node58" class="node">
+<title>type~mappedscalar1d</title>
+<g id="a_type~~graph~~TypeGraph_node58"><a xlink:href=".././type/mappedscalar1d.html" xlink:title="MappedScalar1D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2256,-81 2152,-81 2152,-57 2256,-57 2256,-81"/>
+<text text-anchor="middle" x="2204" y="-66.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedScalar1D</text>
+</a>
+</g>
+</g>
+<!-- type~mappedscalar1d&#45;&gt;type~mappedscalar1d_t -->
+<g id="type~~graph~~TypeGraph_edge73" class="edge">
+<title>type~mappedscalar1d&#45;&gt;type~mappedscalar1d_t</title>
+<path fill="none" stroke="#005cff" d="M2176.36,-81C2141.61,-96.66 2080.67,-124.13 2041.74,-141.67"/>
+<polygon fill="#005cff" stroke="#005cff" points="2040.02,-138.6 2032.34,-145.9 2042.9,-144.99 2040.02,-138.6"/>
+</g>
+<!-- type~dgmodel2d&#45;&gt;type~dgmodel2d_t -->
+<g id="type~~graph~~TypeGraph_edge74" class="edge">
+<title>type~dgmodel2d&#45;&gt;type~dgmodel2d_t</title>
+<path fill="none" stroke="#004bff" d="M2763.72,-429.17C2759.3,-431.83 2754.88,-434.81 2751,-438 2741.51,-445.82 2745.16,-457.22 2733,-459"/>
+<path fill="none" stroke="#004bff" d="M2732,-459C2729.49,-459.37 2726.92,-459.63 2724.31,-459.8"/>
+<polygon fill="#004bff" stroke="#004bff" points="2724.11,-456.3 2714.2,-460.05 2724.28,-463.3 2724.11,-456.3"/>
+</g>
+<!-- type~lineareuler2d -->
+<g id="type~~graph~~TypeGraph_node60" class="node">
+<title>type~lineareuler2d</title>
+<g id="a_type~~graph~~TypeGraph_node60"><a xlink:href=".././type/lineareuler2d.html" xlink:title="LinearEuler2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3157,-276 3068,-276 3068,-252 3157,-252 3157,-276"/>
+<text text-anchor="middle" x="3112.5" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">LinearEuler2D</text>
+</a>
+</g>
+</g>
+<!-- type~lineareuler2d&#45;&gt;type~lineareuler2d_t -->
+<g id="type~~graph~~TypeGraph_edge75" class="edge">
+<title>type~lineareuler2d&#45;&gt;type~lineareuler2d_t</title>
+<path fill="none" stroke="#003bff" d="M3067.7,-274C3059.78,-276.85 3051.87,-280.46 3045,-285 3034.74,-291.78 3038.96,-303.15 3027,-306"/>
+<path fill="none" stroke="#003bff" d="M3026,-306C3015.93,-308.4 3005.23,-310.93 2994.85,-313.39"/>
+<polygon fill="#003bff" stroke="#003bff" points="2993.97,-310 2985.05,-315.7 2995.58,-316.81 2993.97,-310"/>
+</g>
+<!-- type~semmesh -->
+<g id="type~~graph~~TypeGraph_node61" class="node">
+<title>type~semmesh</title>
+<g id="a_type~~graph~~TypeGraph_node61"><a xlink:href=".././type/semmesh.html" xlink:title="SEMMesh">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1857,-765 1794,-765 1794,-741 1857,-741 1857,-765"/>
+<text text-anchor="middle" x="1825.5" y="-750.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">SEMMesh</text>
+</a>
+</g>
+</g>
+<!-- type~semmesh&#45;&gt;type~domaindecomposition -->
+<g id="type~~graph~~TypeGraph_edge76" class="edge">
+<title>type~semmesh&#45;&gt;type~domaindecomposition</title>
+<path fill="none" stroke="#002bff" stroke-dasharray="5,2" d="M1793.76,-753C1770.53,-753 1737.59,-753 1707.37,-753"/>
+<polygon fill="#002bff" stroke="#002bff" points="1707.25,-749.5 1697.25,-753 1707.25,-756.5 1707.25,-749.5"/>
+<text text-anchor="middle" x="1741" y="-755.4" font-family="Helvetica,sans-Serif" font-size="9.50">decomp</text>
+</g>
+<!-- type~nulldgmodel3d_t&#45;&gt;type~dgmodel3d -->
+<g id="type~~graph~~TypeGraph_edge77" class="edge">
+<title>type~nulldgmodel3d_t&#45;&gt;type~dgmodel3d</title>
+<path fill="none" stroke="#001bff" d="M2882.99,-712.13C2870.79,-712.25 2857.89,-713.02 2846,-715"/>
+</g>
+<!-- type~advection_diffusion_2d~2 -->
+<g id="type~~graph~~TypeGraph_node63" class="node">
+<title>type~advection_diffusion_2d~2</title>
+<g id="a_type~~graph~~TypeGraph_node63"><a xlink:href=".././type/advection_diffusion_2d~2.html" xlink:title="advection_diffusion_2d">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3180,-528 3045,-528 3045,-504 3180,-504 3180,-528"/>
+<text text-anchor="middle" x="3112.5" y="-513.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">advection_diffusion_2d</text>
+</a>
+</g>
+</g>
+<!-- type~advection_diffusion_2d~2&#45;&gt;type~advection_diffusion_2d_t -->
+<g id="type~~graph~~TypeGraph_edge78" class="edge">
+<title>type~advection_diffusion_2d~2&#45;&gt;type~advection_diffusion_2d_t</title>
+<path fill="none" stroke="#000aff" d="M3077.93,-528.11C3058.69,-534.31 3036.52,-539.99 3027,-537"/>
+<path fill="none" stroke="#000aff" d="M3026,-537C2998.99,-528.52 2973.17,-508.46 2956.36,-493.23"/>
+<polygon fill="#000aff" stroke="#000aff" points="2958.56,-490.49 2948.87,-486.21 2953.78,-495.6 2958.56,-490.49"/>
+</g>
+<!-- type~mappedscalar2d&#45;&gt;type~mappedscalar2d_t -->
+<g id="type~~graph~~TypeGraph_edge79" class="edge">
+<title>type~mappedscalar2d&#45;&gt;type~mappedscalar2d_t</title>
+<path fill="none" stroke="#0500ff" d="M2151.88,-291C2127.36,-291 2097.69,-291 2071.49,-291"/>
+<polygon fill="#0500ff" stroke="#0500ff" points="2071.26,-287.5 2061.26,-291 2071.26,-294.5 2071.26,-287.5"/>
+</g>
+<!-- type~advection_diffusion_3d -->
+<g id="type~~graph~~TypeGraph_node66" class="node">
+<title>type~advection_diffusion_3d</title>
+<g id="a_type~~graph~~TypeGraph_node66"><a xlink:href=".././type/advection_diffusion_3d.html" xlink:title="advection_diffusion_3d">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3180,-622 3045,-622 3045,-598 3180,-598 3180,-622"/>
+<text text-anchor="middle" x="3112.5" y="-607.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">advection_diffusion_3d</text>
+</a>
+</g>
+</g>
+<!-- type~advection_diffusion_3d&#45;&gt;type~advection_diffusion_3d_t -->
+<g id="type~~graph~~TypeGraph_edge80" class="edge">
+<title>type~advection_diffusion_3d&#45;&gt;type~advection_diffusion_3d_t</title>
+<path fill="none" stroke="#2500ff" d="M3062.12,-622.14C3056.11,-624.6 3050.25,-627.53 3045,-631 3034.74,-637.78 3039.2,-650.46 3027,-652"/>
+<path fill="none" stroke="#2500ff" d="M3026,-652C3023.45,-652.32 3020.86,-652.6 3018.24,-652.85"/>
+<polygon fill="#2500ff" stroke="#2500ff" points="3017.72,-649.38 3008.03,-653.66 3018.27,-656.36 3017.72,-649.38"/>
+</g>
+<!-- type~geometry1d -->
+<g id="type~~graph~~TypeGraph_node67" class="node">
+<title>type~geometry1d</title>
+<g id="a_type~~graph~~TypeGraph_node67"><a xlink:href=".././type/geometry1d.html" xlink:title="Geometry1D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1866,-219 1785,-219 1785,-195 1866,-195 1866,-219"/>
+<text text-anchor="middle" x="1825.5" y="-204.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Geometry1D</text>
+</a>
+</g>
+</g>
+<!-- type~geometry1d&#45;&gt;type~scalar1d -->
+<g id="type~~graph~~TypeGraph_edge81" class="edge">
+<title>type~geometry1d&#45;&gt;type~scalar1d</title>
+<path fill="none" stroke="#3600ff" stroke-dasharray="5,2" d="M1784.77,-207C1751.36,-207 1703.83,-207 1670.38,-207"/>
+<polygon fill="#3600ff" stroke="#3600ff" points="1670.05,-203.5 1660.05,-207 1670.05,-210.5 1670.05,-203.5"/>
+<text text-anchor="middle" x="1741" y="-209.4" font-family="Helvetica,sans-Serif" font-size="9.50">x, dxds</text>
+</g>
+<!-- type~mesh2d_t&#45;&gt;type~semmesh -->
+<g id="type~~graph~~TypeGraph_edge82" class="edge">
+<title>type~mesh2d_t&#45;&gt;type~semmesh</title>
+<path fill="none" stroke="#4600ff" d="M1972.09,-767.8C1953.46,-763.52 1929.38,-757.98 1908,-753"/>
+</g>
+<!-- type~scalar3d~2 -->
+<g id="type~~graph~~TypeGraph_node69" class="node">
+<title>type~scalar3d~2</title>
+<g id="a_type~~graph~~TypeGraph_node69"><a xlink:href=".././type/scalar3d~2.html" xlink:title="Scalar3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660,-387 1599,-387 1599,-363 1660,-363 1660,-387"/>
+<text text-anchor="middle" x="1629.5" y="-372.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Scalar3D</text>
+</a>
+</g>
+</g>
+<!-- type~scalar3d~2&#45;&gt;type~scalar3d_t -->
+<g id="type~~graph~~TypeGraph_edge84" class="edge">
+<title>type~scalar3d~2&#45;&gt;type~scalar3d_t</title>
+<path fill="none" stroke="#5600ff" d="M1598.9,-381.11C1571.26,-386.81 1529.65,-395.39 1498.1,-401.9"/>
+<polygon fill="#5600ff" stroke="#5600ff" points="1497.33,-398.49 1488.24,-403.94 1498.74,-405.34 1497.33,-398.49"/>
+</g>
+<!-- type~scalar3d~2&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge83" class="edge">
+<title>type~scalar3d~2&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#5600ff" stroke-dasharray="5,2" d="M1598.86,-366.08C1578.3,-360.18 1550.19,-352.7 1525,-348 1129.67,-274.17 1015,-347.09 626,-245 596.14,-237.16 585.46,-197.93 562,-218"/>
+<text text-anchor="middle" x="932.5" y="-314.4" font-family="Helvetica,sans-Serif" font-size="9.50">blas_handle, interior_gpu, boundary_gpu, boundarynormal_gpu, extBoundary_gpu, avgBoundary_gpu, interpWork1, interpWork2</text>
+</g>
+<!-- type~nulldgmodel3d~2 -->
+<g id="type~~graph~~TypeGraph_node70" class="node">
+<title>type~nulldgmodel3d~2</title>
+<g id="a_type~~graph~~TypeGraph_node70"><a xlink:href=".././type/nulldgmodel3d~2.html" xlink:title="NullDGModel3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3161,-706 3064,-706 3064,-682 3161,-682 3161,-706"/>
+<text text-anchor="middle" x="3112.5" y="-691.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">NullDGModel3D</text>
+</a>
+</g>
+</g>
+<!-- type~nulldgmodel3d~2&#45;&gt;type~nulldgmodel3d_t -->
+<g id="type~~graph~~TypeGraph_edge85" class="edge">
+<title>type~nulldgmodel3d~2&#45;&gt;type~nulldgmodel3d_t</title>
+<path fill="none" stroke="#6700ff" d="M3068.82,-706.08C3060.8,-708.74 3052.56,-711.74 3045,-715 3036.59,-718.62 3036.15,-724.97 3027,-725"/>
+<path fill="none" stroke="#6700ff" d="M3026,-725C3017.3,-725.02 3008.15,-724.56 2999.17,-723.82"/>
+<polygon fill="#6700ff" stroke="#6700ff" points="2999.41,-720.33 2989.13,-722.88 2998.76,-727.3 2999.41,-720.33"/>
+</g>
+<!-- type~dgmodel3d_t&#45;&gt;type~mappedvector3d -->
+<g id="type~~graph~~TypeGraph_edge87" class="edge">
+<title>type~dgmodel3d_t&#45;&gt;type~mappedvector3d</title>
+<path fill="none" stroke="#7700ff" stroke-dasharray="5,2" d="M2628.78,-698.21C2546.42,-706.53 2362.61,-725.09 2266.4,-734.8"/>
+<polygon fill="#7700ff" stroke="#7700ff" points="2265.83,-731.34 2256.24,-735.83 2266.54,-738.3 2265.83,-731.34"/>
+<text text-anchor="middle" x="2442.5" y="-735.4" font-family="Helvetica,sans-Serif" font-size="9.50">solutionGradient, flux</text>
+</g>
+<!-- type~dgmodel3d_t&#45;&gt;type~mappedscalar3d -->
+<g id="type~~graph~~TypeGraph_edge86" class="edge">
+<title>type~dgmodel3d_t&#45;&gt;type~mappedscalar3d</title>
+<path fill="none" stroke="#7700ff" stroke-dasharray="5,2" d="M2628.71,-688.21C2538.33,-674.96 2328.45,-640.08 2274,-595 2259.3,-582.83 2269.78,-569.21 2256,-556 2254.74,-554.79 2253.4,-553.65 2252,-552.57"/>
+<polygon fill="#7700ff" stroke="#7700ff" points="2253.74,-549.53 2243.44,-547.05 2249.94,-555.41 2253.74,-549.53"/>
+<text text-anchor="middle" x="2442.5" y="-686.4" font-family="Helvetica,sans-Serif" font-size="9.50">solution, source, fluxDivergence, dSdt, workSol</text>
+</g>
+<!-- type~dgmodel3d_t&#45;&gt;type~mesh3d -->
+<g id="type~~graph~~TypeGraph_edge88" class="edge">
+<title>type~dgmodel3d_t&#45;&gt;type~mesh3d</title>
+<path fill="none" stroke="#7700ff" stroke-dasharray="5,2" d="M2659.71,-706.01C2648.52,-717.83 2630.04,-735.71 2611,-747 2485.52,-821.42 2315.76,-866.57 2241.89,-883.88"/>
+<polygon fill="#7700ff" stroke="#7700ff" points="2240.65,-880.58 2231.7,-886.24 2242.23,-887.4 2240.65,-880.58"/>
+<text text-anchor="middle" x="2442.5" y="-877.4" font-family="Helvetica,sans-Serif" font-size="9.50">mesh</text>
+</g>
+<!-- type~dgmodel3d_t&#45;&gt;type~model -->
+<g id="type~~graph~~TypeGraph_edge90" class="edge">
+<title>type~dgmodel3d_t&#45;&gt;type~model</title>
+<path fill="none" stroke="#7700ff" d="M2670.8,-681.53C2670.88,-647.5 2665.94,-552.66 2611,-509 2552.52,-462.52 2512.32,-524.06 2443.5,-495"/>
+<path fill="none" stroke="#7700ff" d="M2441.5,-495C2372.1,-465.69 2348.16,-482.27 2274,-469 2263.24,-467.07 2251.58,-464.79 2240.96,-462.62"/>
+<polygon fill="#7700ff" stroke="#7700ff" points="2241.66,-459.19 2231.16,-460.6 2240.25,-466.05 2241.66,-459.19"/>
+</g>
+<!-- type~dgmodel3d_t&#45;&gt;type~semhex -->
+<g id="type~~graph~~TypeGraph_edge89" class="edge">
+<title>type~dgmodel3d_t&#45;&gt;type~semhex</title>
+<path fill="none" stroke="#7700ff" stroke-dasharray="5,2" d="M2441.5,-495C2339.99,-452.14 2055.82,-520.28 1948,-543 1919.09,-549.09 1911.84,-551.09 1884,-561 1876.74,-563.59 1869.09,-566.65 1861.84,-569.74"/>
+<polygon fill="#7700ff" stroke="#7700ff" points="1860.02,-566.71 1852.25,-573.92 1862.81,-573.13 1860.02,-566.71"/>
+<text text-anchor="middle" x="2106.5" y="-516.4" font-family="Helvetica,sans-Serif" font-size="9.50">geometry</text>
+</g>
+<!-- type~vector2d_t&#45;&gt;type~self_dataobj -->
+<g id="type~~graph~~TypeGraph_edge91" class="edge">
+<title>type~vector2d_t&#45;&gt;type~self_dataobj</title>
+<path fill="none" stroke="#8700ff" d="M1417.65,-278.54C1399.03,-275.16 1377.01,-275.26 1363,-289"/>
+</g>
+<!-- type~mesh1d -->
+<g id="type~~graph~~TypeGraph_node73" class="node">
+<title>type~mesh1d</title>
+<g id="a_type~~graph~~TypeGraph_node73"><a xlink:href=".././type/mesh1d.html" xlink:title="Mesh1D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2134,-651 2079,-651 2079,-627 2134,-627 2134,-651"/>
+<text text-anchor="middle" x="2106.5" y="-636.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Mesh1D</text>
+</a>
+</g>
+</g>
+<!-- type~mesh1d&#45;&gt;type~semmesh -->
+<g id="type~~graph~~TypeGraph_edge92" class="edge">
+<title>type~mesh1d&#45;&gt;type~semmesh</title>
+<path fill="none" stroke="#9700ff" d="M2090.67,-651.18C2051.9,-682.41 1947.81,-762.27 1908,-753"/>
+<path fill="none" stroke="#9700ff" d="M1906,-753C1893.62,-750.6 1879.94,-749.91 1867.47,-750.02"/>
+<polygon fill="#9700ff" stroke="#9700ff" points="1867.25,-746.52 1857.34,-750.28 1867.43,-753.52 1867.25,-746.52"/>
+</g>
+<!-- type~lagrange~2 -->
+<g id="type~~graph~~TypeGraph_node74" class="node">
+<title>type~lagrange~2</title>
+<g id="a_type~~graph~~TypeGraph_node74"><a xlink:href=".././type/lagrange~2.html" xlink:title="Lagrange">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="593,-761 529,-761 529,-737 593,-737 593,-761"/>
+<text text-anchor="middle" x="561" y="-746.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Lagrange</text>
+</a>
+</g>
+</g>
+<!-- type~lagrange~2&#45;&gt;type~lagrange_t -->
+<g id="type~~graph~~TypeGraph_edge94" class="edge">
+<title>type~lagrange~2&#45;&gt;type~lagrange_t</title>
+<path fill="none" stroke="#a800ff" d="M528.92,-752.35C518.41,-752.85 506.64,-752.72 496,-751"/>
+<path fill="none" stroke="#a800ff" d="M495,-751C482.53,-748.98 486.31,-737.54 477,-729 434.84,-690.29 378.43,-654.59 344.09,-634.34"/>
+<polygon fill="#a800ff" stroke="#a800ff" points="345.43,-631.06 335.02,-629.05 341.9,-637.11 345.43,-631.06"/>
+</g>
+<!-- type~lagrange~2&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge93" class="edge">
+<title>type~lagrange~2&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#a800ff" stroke-dasharray="5,2" d="M495,-751C342.63,-726.38 301.92,-753.54 148,-765 127.49,-766.53 119.42,-780.93 102,-770"/>
+<path fill="none" stroke="#a800ff" stroke-dasharray="5,2" d="M100,-770C54.7,-740.53 37.32,-674.34 31.13,-639.47"/>
+<polygon fill="#a800ff" stroke="#a800ff" points="34.54,-638.65 29.49,-629.33 27.63,-639.76 34.54,-638.65"/>
+<text text-anchor="middle" x="312.5" y="-767.4" font-family="Helvetica,sans-Serif" font-size="9.50">qWeights_gpu, iMatrix_gpu, dMatrix_gpu, dgMatrix_gpu, bMatrix_gpu</text>
+</g>
+<!-- type~semquad&#45;&gt;type~vector2d -->
+<g id="type~~graph~~TypeGraph_edge95" class="edge">
+<title>type~semquad&#45;&gt;type~vector2d</title>
+<path fill="none" stroke="#b800ff" stroke-dasharray="5,2" d="M1804.88,-361.91C1793.92,-355.36 1779.91,-347.35 1767,-341 1759.44,-337.29 1704.91,-314.88 1697,-312 1688.32,-308.84 1678.91,-305.7 1669.97,-302.84"/>
+<polygon fill="#b800ff" stroke="#b800ff" points="1670.74,-299.41 1660.15,-299.76 1668.64,-306.09 1670.74,-299.41"/>
+<text text-anchor="middle" x="1741" y="-343.4" font-family="Helvetica,sans-Serif" font-size="9.50">x, nHat</text>
+</g>
+<!-- type~semquad&#45;&gt;type~tensor2d -->
+<g id="type~~graph~~TypeGraph_edge96" class="edge">
+<title>type~semquad&#45;&gt;type~tensor2d</title>
+<path fill="none" stroke="#b800ff" stroke-dasharray="5,2" d="M1802.88,-386.19C1777.91,-399.95 1735.33,-422.45 1697,-438 1688.52,-441.44 1679.26,-444.68 1670.41,-447.54"/>
+<polygon fill="#b800ff" stroke="#b800ff" points="1669.15,-444.26 1660.65,-450.59 1671.24,-450.94 1669.15,-444.26"/>
+<text text-anchor="middle" x="1741" y="-430.4" font-family="Helvetica,sans-Serif" font-size="9.50">dxds, dsdx</text>
+</g>
+<!-- type~semquad&#45;&gt;type~scalar2d -->
+<g id="type~~graph~~TypeGraph_edge97" class="edge">
+<title>type~semquad&#45;&gt;type~scalar2d</title>
+<path fill="none" stroke="#b800ff" stroke-dasharray="5,2" d="M1793.31,-367.93C1771.38,-363.61 1741.36,-357.61 1715,-352 1700.33,-348.88 1684.25,-345.3 1670.1,-342.1"/>
+<polygon fill="#b800ff" stroke="#b800ff" points="1670.71,-338.65 1660.18,-339.85 1669.16,-345.48 1670.71,-338.65"/>
+<text text-anchor="middle" x="1741" y="-364.4" font-family="Helvetica,sans-Serif" font-size="9.50">nScale, J</text>
+</g>
+<!-- type~mesh3d_t&#45;&gt;type~semmesh -->
+<g id="type~~graph~~TypeGraph_edge98" class="edge">
+<title>type~mesh3d_t&#45;&gt;type~semmesh</title>
+<path fill="none" stroke="#c800ff" d="M1996.54,-880.93C1977.15,-847.59 1922.97,-756.49 1908,-753"/>
+</g>
+<!-- type~dgmodel1d_t&#45;&gt;type~model -->
+<g id="type~~graph~~TypeGraph_edge102" class="edge">
+<title>type~dgmodel1d_t&#45;&gt;type~model</title>
+<path fill="none" stroke="#d900ff" d="M2668.53,-228.2C2663.73,-253.44 2648.97,-311.28 2611,-338 2487.77,-424.71 2407.25,-304.65 2274,-375 2263.13,-380.74 2264.02,-386.68 2256,-396 2244.77,-409.05 2232.12,-423.69 2222.22,-435.12"/>
+<polygon fill="#d900ff" stroke="#d900ff" points="2219.46,-432.96 2215.56,-442.81 2224.76,-437.54 2219.46,-432.96"/>
+</g>
+<!-- type~dgmodel1d_t&#45;&gt;type~mappedscalar1d -->
+<g id="type~~graph~~TypeGraph_edge99" class="edge">
+<title>type~dgmodel1d_t&#45;&gt;type~mappedscalar1d</title>
+<path fill="none" stroke="#d900ff" stroke-dasharray="5,2" d="M2641.95,-203.88C2632.2,-199.91 2621.19,-195.59 2611,-192 2486.43,-148.11 2337.16,-105.35 2258.92,-83.68"/>
+<polygon fill="#d900ff" stroke="#d900ff" points="2259.85,-80.3 2249.27,-81.01 2257.98,-87.05 2259.85,-80.3"/>
+<text text-anchor="middle" x="2442.5" y="-194.4" font-family="Helvetica,sans-Serif" font-size="9.50">solution, solutionGradient, flux, source, fluxDivergence, dSdt, workSol</text>
+</g>
+<!-- type~dgmodel1d_t&#45;&gt;type~geometry1d -->
+<g id="type~~graph~~TypeGraph_edge101" class="edge">
+<title>type~dgmodel1d_t&#45;&gt;type~geometry1d</title>
+<path fill="none" stroke="#d900ff" stroke-dasharray="5,2" d="M2628.93,-215.56C2488.01,-214.05 2028.67,-209.16 1876.2,-207.53"/>
+<polygon fill="#d900ff" stroke="#d900ff" points="1876.22,-204.03 1866.18,-207.42 1876.14,-211.03 1876.22,-204.03"/>
+<text text-anchor="middle" x="2106.5" y="-212.4" font-family="Helvetica,sans-Serif" font-size="9.50">geometry</text>
+</g>
+<!-- type~dgmodel1d_t&#45;&gt;type~mesh1d -->
+<g id="type~~graph~~TypeGraph_edge100" class="edge">
+<title>type~dgmodel1d_t&#45;&gt;type~mesh1d</title>
+<path fill="none" stroke="#d900ff" stroke-dasharray="5,2" d="M2669.93,-228.15C2667.82,-258 2657.86,-335.03 2611,-370 2550.79,-414.93 2327.37,-344.13 2274,-397 2242.14,-428.56 2284.73,-563.57 2256,-598 2241.76,-615.06 2183.45,-627.25 2144.28,-633.7"/>
+<polygon fill="#d900ff" stroke="#d900ff" points="2143.6,-630.26 2134.28,-635.29 2144.7,-637.17 2143.6,-630.26"/>
+<text text-anchor="middle" x="2442.5" y="-399.4" font-family="Helvetica,sans-Serif" font-size="9.50">mesh</text>
+</g>
+<!-- type~burgers1d~2 -->
+<g id="type~~graph~~TypeGraph_node78" class="node">
+<title>type~burgers1d~2</title>
+<g id="a_type~~graph~~TypeGraph_node78"><a xlink:href=".././type/burgers1d~2.html" xlink:title="Burgers1D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3147.5,-192 3077.5,-192 3077.5,-168 3147.5,-168 3147.5,-192"/>
+<text text-anchor="middle" x="3112.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Burgers1D</text>
+</a>
+</g>
+</g>
+<!-- type~burgers1d~2&#45;&gt;type~burgers1d_t -->
+<g id="type~~graph~~TypeGraph_edge103" class="edge">
+<title>type~burgers1d~2&#45;&gt;type~burgers1d_t</title>
+<path fill="none" stroke="#e900ff" d="M3077.2,-187.84C3066.49,-191.06 3054.9,-195.38 3045,-201 3035.69,-206.28 3037.67,-216.19 3027,-217"/>
+<path fill="none" stroke="#e900ff" d="M3026,-217C3012.98,-217.98 2998.87,-217.99 2985.8,-217.56"/>
+<polygon fill="#e900ff" stroke="#e900ff" points="2985.73,-214.06 2975.59,-217.13 2985.43,-221.05 2985.73,-214.06"/>
+</g>
+<!-- type~scalar1d~2 -->
+<g id="type~~graph~~TypeGraph_node79" class="node">
+<title>type~scalar1d~2</title>
+<g id="a_type~~graph~~TypeGraph_node79"><a xlink:href=".././type/scalar1d~2.html" xlink:title="Scalar1D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660,-177 1599,-177 1599,-153 1660,-153 1660,-177"/>
+<text text-anchor="middle" x="1629.5" y="-162.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Scalar1D</text>
+</a>
+</g>
+</g>
+<!-- type~scalar1d~2&#45;&gt;type~scalar1d_t -->
+<g id="type~~graph~~TypeGraph_edge105" class="edge">
+<title>type~scalar1d~2&#45;&gt;type~scalar1d_t</title>
+<path fill="none" stroke="#f900ff" d="M1543,-169C1532.95,-170.33 1533.86,-178.09 1525,-183 1516.48,-187.72 1506.93,-191.89 1497.67,-195.43"/>
+<polygon fill="#f900ff" stroke="#f900ff" points="1496.37,-192.18 1488.17,-198.89 1498.77,-198.76 1496.37,-192.18"/>
+</g>
+<!-- type~scalar1d~2&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge104" class="edge">
+<title>type~scalar1d~2&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#f900ff" stroke-dasharray="5,2" d="M1598.67,-165.18C1582.44,-165.59 1562.05,-166.6 1544,-169"/>
+<path fill="none" stroke="#f900ff" stroke-dasharray="5,2" d="M1543,-169C1340.87,-195.83 827.7,-171.08 626,-201 596.89,-205.32 584.59,-199.14 562,-218"/>
+<text text-anchor="middle" x="932.5" y="-203.4" font-family="Helvetica,sans-Serif" font-size="9.50">blas_handle</text>
+</g>
+<!-- type~mesh3d~2 -->
+<g id="type~~graph~~TypeGraph_node80" class="node">
+<title>type~mesh3d~2</title>
+<g id="a_type~~graph~~TypeGraph_node80"><a xlink:href=".././type/mesh3d~2.html" xlink:title="Mesh3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2231.5,-946 2176.5,-946 2176.5,-922 2231.5,-922 2231.5,-946"/>
+<text text-anchor="middle" x="2204" y="-931.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Mesh3D</text>
+</a>
+</g>
+</g>
+<!-- type~mesh3d~2&#45;&gt;type~mesh3d_t -->
+<g id="type~~graph~~TypeGraph_edge107" class="edge">
+<title>type~mesh3d~2&#45;&gt;type~mesh3d_t</title>
+<path fill="none" stroke="#ff00f4" d="M2176.17,-935.03C2156.99,-935.44 2130.59,-935.36 2107.5,-933"/>
+<path fill="none" stroke="#ff00f4" d="M2105.5,-933C2092.42,-931.66 2063.54,-919.72 2040.16,-909.24"/>
+<polygon fill="#ff00f4" stroke="#ff00f4" points="2041.41,-905.96 2030.86,-905.01 2038.52,-912.34 2041.41,-905.96"/>
+</g>
+<!-- type~mesh3d~2&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge106" class="edge">
+<title>type~mesh3d~2&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#ff00f4" stroke-dasharray="5,2" d="M2105.5,-933C1784.92,-900.21 1667.82,-1050.92 1381,-904 1369.45,-898.08 1375.83,-882.98 1363,-881"/>
+<text text-anchor="middle" x="1453" y="-959.4" font-family="Helvetica,sans-Serif" font-size="9.50">sideInfo_gpu</text>
+</g>
+<!-- type~linearshallowwater2d~2 -->
+<g id="type~~graph~~TypeGraph_node81" class="node">
+<title>type~linearshallowwater2d~2</title>
+<g id="a_type~~graph~~TypeGraph_node81"><a xlink:href=".././type/linearshallowwater2d~2.html" xlink:title="LinearShallowWater2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="3179.5,-360 3045.5,-360 3045.5,-336 3179.5,-336 3179.5,-360"/>
+<text text-anchor="middle" x="3112.5" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">LinearShallowWater2D</text>
+</a>
+</g>
+</g>
+<!-- type~linearshallowwater2d~2&#45;&gt;type~linearshallowwater2d_t -->
+<g id="type~~graph~~TypeGraph_edge108" class="edge">
+<title>type~linearshallowwater2d~2&#45;&gt;type~linearshallowwater2d_t</title>
+<path fill="none" stroke="#ff00e3" d="M3062.12,-360.14C3056.11,-362.6 3050.25,-365.53 3045,-369 3034.74,-375.78 3039.2,-388.53 3027,-390"/>
+<path fill="none" stroke="#ff00e3" d="M3026,-390C3023.29,-390.33 3020.53,-390.61 3017.74,-390.85"/>
+<polygon fill="#ff00e3" stroke="#ff00e3" points="3017.27,-387.37 3007.54,-391.55 3017.75,-394.36 3017.27,-387.37"/>
+</g>
+<!-- type~scalar2d~2 -->
+<g id="type~~graph~~TypeGraph_node82" class="node">
+<title>type~scalar2d~2</title>
+<g id="a_type~~graph~~TypeGraph_node82"><a xlink:href=".././type/scalar2d~2.html" xlink:title="Scalar2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660,-429 1599,-429 1599,-405 1660,-405 1660,-429"/>
+<text text-anchor="middle" x="1629.5" y="-414.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Scalar2D</text>
+</a>
+</g>
+</g>
+<!-- type~scalar2d~2&#45;&gt;type~scalar2d_t -->
+<g id="type~~graph~~TypeGraph_edge110" class="edge">
+<title>type~scalar2d~2&#45;&gt;type~scalar2d_t</title>
+<path fill="none" stroke="#ff00d3" d="M1598.9,-408.86C1571.26,-401.25 1529.65,-389.81 1498.1,-381.13"/>
+<polygon fill="#ff00d3" stroke="#ff00d3" points="1498.81,-377.7 1488.24,-378.42 1496.96,-384.45 1498.81,-377.7"/>
+</g>
+<!-- type~scalar2d~2&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge109" class="edge">
+<title>type~scalar2d~2&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#ff00d3" stroke-dasharray="5,2" d="M1598.81,-422.4C1533.83,-433.99 1374.02,-461.34 1239,-475 967.55,-502.46 893.43,-453.96 626,-508 596.37,-513.99 592.22,-531.23 562,-531"/>
+<path fill="none" stroke="#ff00d3" stroke-dasharray="5,2" d="M560,-531C531.56,-530.64 519.68,-515.24 496,-531"/>
+<text text-anchor="middle" x="932.5" y="-510.4" font-family="Helvetica,sans-Serif" font-size="9.50">blas_handle, interior_gpu, boundary_gpu, boundarynormal_gpu, extBoundary_gpu, avgBoundary_gpu, interpWork</text>
+</g>
+<!-- type~vector3d_t&#45;&gt;type~self_dataobj -->
+<g id="type~~graph~~TypeGraph_edge111" class="edge">
+<title>type~vector3d_t&#45;&gt;type~self_dataobj</title>
+<path fill="none" stroke="#ff00c3" d="M1432.59,-642.98C1416.24,-631.81 1393.57,-613.67 1381,-592 1361.4,-558.22 1387.22,-536.63 1363,-506"/>
+</g>
+<!-- type~scalar1d~3 -->
+<g id="type~~graph~~TypeGraph_node84" class="node">
+<title>type~scalar1d~3</title>
+<g id="a_type~~graph~~TypeGraph_node84"><a xlink:href=".././type/scalar1d~3.html" xlink:title="Scalar1D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="1660,-135 1599,-135 1599,-111 1660,-111 1660,-135"/>
+<text text-anchor="middle" x="1629.5" y="-120.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Scalar1D</text>
+</a>
+</g>
+</g>
+<!-- type~scalar1d~3&#45;&gt;type~scalar1d_t -->
+<g id="type~~graph~~TypeGraph_edge113" class="edge">
+<title>type~scalar1d~3&#45;&gt;type~scalar1d_t</title>
+<path fill="none" stroke="#ff00b3" d="M1543,-131C1538.71,-132.09 1499.86,-167.07 1474.92,-189.81"/>
+<polygon fill="#ff00b3" stroke="#ff00b3" points="1472.4,-187.37 1467.38,-196.7 1477.12,-192.54 1472.4,-187.37"/>
+</g>
+<!-- type~scalar1d~3&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge112" class="edge">
+<title>type~scalar1d~3&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#ff00b3" stroke-dasharray="5,2" d="M1598.79,-123.56C1582.41,-124.43 1561.85,-126.45 1544,-131"/>
+<path fill="none" stroke="#ff00b3" stroke-dasharray="5,2" d="M1543,-131C1444.19,-156.21 721.73,-132.87 626,-168 592.11,-180.44 589.71,-194.87 562,-218"/>
+<text text-anchor="middle" x="932.5" y="-170.4" font-family="Helvetica,sans-Serif" font-size="9.50">blas_handle, interior_gpu, boundary_gpu, extBoundary_gpu, avgBoundary_gpu, boundarynormal_gpu</text>
+</g>
+<!-- type~mappedvector3d~2 -->
+<g id="type~~graph~~TypeGraph_node85" class="node">
+<title>type~mappedvector3d~2</title>
+<g id="a_type~~graph~~TypeGraph_node85"><a xlink:href=".././type/mappedvector3d~2.html" xlink:title="MappedVector3D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2256,-589 2152,-589 2152,-565 2256,-565 2256,-589"/>
+<text text-anchor="middle" x="2204" y="-574.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedVector3D</text>
+</a>
+</g>
+</g>
+<!-- type~mappedvector3d~2&#45;&gt;type~mappedvector3d_t -->
+<g id="type~~graph~~TypeGraph_edge114" class="edge">
+<title>type~mappedvector3d~2&#45;&gt;type~mappedvector3d_t</title>
+<path fill="none" stroke="#ff00a2" d="M2157.19,-589.06C2128.63,-596.58 2091.68,-606.31 2061.39,-614.28"/>
+<polygon fill="#ff00a2" stroke="#ff00a2" points="2060.18,-610.98 2051.4,-616.91 2061.96,-617.75 2060.18,-610.98"/>
+</g>
+<!-- type~scalar1d_t&#45;&gt;type~self_dataobj -->
+<g id="type~~graph~~TypeGraph_edge115" class="edge">
+<title>type~scalar1d_t&#45;&gt;type~self_dataobj</title>
+<path fill="none" stroke="#ff0092" d="M1435.83,-221.16C1420.99,-232.62 1398.7,-250.57 1381,-268 1372.24,-276.63 1371.78,-280.4 1363,-289"/>
+<path fill="none" stroke="#ff0092" d="M1362,-289C1330.35,-320.02 1313.73,-370.63 1306.36,-399.66"/>
+<polygon fill="#ff0092" stroke="#ff0092" points="1302.89,-399.1 1303.97,-409.64 1309.7,-400.72 1302.89,-399.1"/>
+</g>
+<!-- type~mappedscalar1d_t&#45;&gt;type~scalar1d -->
+<g id="type~~graph~~TypeGraph_edge117" class="edge">
+<title>type~mappedscalar1d_t&#45;&gt;type~scalar1d</title>
+<path fill="none" stroke="#ff0082" d="M1947.8,-165.02C1903.64,-170.61 1840.36,-178.69 1785,-186 1745.94,-191.16 1701.35,-197.24 1670.15,-201.53"/>
+<polygon fill="#ff0082" stroke="#ff0082" points="1669.54,-198.08 1660.11,-202.91 1670.49,-205.01 1669.54,-198.08"/>
+</g>
+<!-- type~mappedscalar1d_t&#45;&gt;type~geometry1d -->
+<g id="type~~graph~~TypeGraph_edge116" class="edge">
+<title>type~mappedscalar1d_t&#45;&gt;type~geometry1d</title>
+<path fill="none" stroke="#ff0082" stroke-dasharray="5,2" d="M1959.75,-170.11C1934.33,-177.15 1902.23,-186.04 1875.91,-193.32"/>
+<polygon fill="#ff0082" stroke="#ff0082" points="1874.83,-189.99 1866.13,-196.03 1876.7,-196.74 1874.83,-189.99"/>
+<text text-anchor="middle" x="1907" y="-191.4" font-family="Helvetica,sans-Serif" font-size="9.50">geometry</text>
+</g>
+<!-- type~lagrange~3 -->
+<g id="type~~graph~~TypeGraph_node88" class="node">
+<title>type~lagrange~3</title>
+<g id="a_type~~graph~~TypeGraph_node88"><a xlink:href=".././type/lagrange~3.html" xlink:title="Lagrange">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="593,-587 529,-587 529,-563 593,-563 593,-587"/>
+<text text-anchor="middle" x="561" y="-572.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Lagrange</text>
+</a>
+</g>
+</g>
+<!-- type~lagrange~3&#45;&gt;type~lagrange_t -->
+<g id="type~~graph~~TypeGraph_edge119" class="edge">
+<title>type~lagrange~3&#45;&gt;type~lagrange_t</title>
+<path fill="none" stroke="#ff0071" d="M495,-577C484.89,-577.71 486.3,-586.97 477,-591 439.37,-607.33 392.87,-613.53 359.09,-615.82"/>
+<polygon fill="#ff0071" stroke="#ff0071" points="358.82,-612.33 349.05,-616.42 359.23,-619.32 358.82,-612.33"/>
+</g>
+<!-- type~lagrange~3&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge118" class="edge">
+<title>type~lagrange~3&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#ff0071" stroke-dasharray="5,2" d="M528.73,-575.5C518.31,-575.79 506.65,-576.26 496,-577"/>
+<path fill="none" stroke="#ff0071" stroke-dasharray="5,2" d="M495,-577C320.76,-589.16 268.77,-525.06 102,-577"/>
+<text text-anchor="middle" x="312.5" y="-580.4" font-family="Helvetica,sans-Serif" font-size="9.50">qWeights_gpu, iMatrix_gpu, dMatrix_gpu, dgMatrix_gpu, bMatrix_gpu</text>
+</g>
+<!-- type~mappedvector2d~2 -->
+<g id="type~~graph~~TypeGraph_node89" class="node">
+<title>type~mappedvector2d~2</title>
+<g id="a_type~~graph~~TypeGraph_node89"><a xlink:href=".././type/mappedvector2d~2.html" xlink:title="MappedVector2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2256,-345 2152,-345 2152,-321 2256,-321 2256,-345"/>
+<text text-anchor="middle" x="2204" y="-330.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedVector2D</text>
+</a>
+</g>
+</g>
+<!-- type~mappedvector2d~2&#45;&gt;type~mappedvector2d_t -->
+<g id="type~~graph~~TypeGraph_edge120" class="edge">
+<title>type~mappedvector2d~2&#45;&gt;type~mappedvector2d_t</title>
+<path fill="none" stroke="#ff0061" d="M2163.89,-345.07C2146.75,-349.35 2126.3,-353.1 2107.5,-353"/>
+<path fill="none" stroke="#ff0061" d="M2105.5,-353C2094.47,-352.94 2082.75,-352.91 2071.37,-352.9"/>
+<polygon fill="#ff0061" stroke="#ff0061" points="2071.04,-349.4 2061.04,-352.9 2071.04,-356.4 2071.04,-349.4"/>
+</g>
+<!-- type~dgmodel1d~2 -->
+<g id="type~~graph~~TypeGraph_node90" class="node">
+<title>type~dgmodel1d~2</title>
+<g id="a_type~~graph~~TypeGraph_node90"><a xlink:href=".././type/dgmodel1d~2.html" xlink:title="DGModel1D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2827,-169 2751,-169 2751,-145 2827,-145 2827,-169"/>
+<text text-anchor="middle" x="2789" y="-154.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">DGModel1D</text>
+</a>
+</g>
+</g>
+<!-- type~dgmodel1d~2&#45;&gt;type~dgmodel1d_t -->
+<g id="type~~graph~~TypeGraph_edge121" class="edge">
+<title>type~dgmodel1d~2&#45;&gt;type~dgmodel1d_t</title>
+<path fill="none" stroke="#ff0051" d="M2763.72,-169.17C2759.3,-171.83 2754.88,-174.81 2751,-178 2741.51,-185.82 2744.69,-195.21 2733,-199"/>
+<path fill="none" stroke="#ff0051" d="M2732,-199C2729.41,-199.84 2726.74,-200.68 2724.05,-201.52"/>
+<polygon fill="#ff0051" stroke="#ff0051" points="2722.79,-198.24 2714.23,-204.49 2724.81,-204.94 2722.79,-198.24"/>
+</g>
+<!-- type~semhex&#45;&gt;type~scalar3d -->
+<g id="type~~graph~~TypeGraph_edge124" class="edge">
+<title>type~semhex&#45;&gt;type~scalar3d</title>
+<path fill="none" stroke="#ff0041" stroke-dasharray="5,2" d="M1800.37,-573.87C1763.59,-555.39 1697.66,-522.27 1697,-522 1688.44,-518.53 1679.08,-515.26 1670.15,-512.38"/>
+<polygon fill="#ff0041" stroke="#ff0041" points="1670.91,-508.95 1660.32,-509.31 1668.82,-515.63 1670.91,-508.95"/>
+<text text-anchor="middle" x="1741" y="-558.4" font-family="Helvetica,sans-Serif" font-size="9.50">nScale, J</text>
+</g>
+<!-- type~semhex&#45;&gt;type~vector3d -->
+<g id="type~~graph~~TypeGraph_edge122" class="edge">
+<title>type~semhex&#45;&gt;type~vector3d</title>
+<path fill="none" stroke="#ff0041" stroke-dasharray="5,2" d="M1799.23,-598.12C1777.01,-608.8 1743.81,-624.83 1715,-639 1706.97,-642.95 1705.29,-644.64 1697,-648 1688.44,-651.47 1679.07,-654.73 1670.15,-657.61"/>
+<polygon fill="#ff0041" stroke="#ff0041" points="1668.82,-654.36 1660.32,-660.68 1670.91,-661.04 1668.82,-654.36"/>
+<text text-anchor="middle" x="1741" y="-641.4" font-family="Helvetica,sans-Serif" font-size="9.50">x, nHat</text>
+</g>
+<!-- type~semhex&#45;&gt;type~tensor3d -->
+<g id="type~~graph~~TypeGraph_edge123" class="edge">
+<title>type~semhex&#45;&gt;type~tensor3d</title>
+<path fill="none" stroke="#ff0041" stroke-dasharray="5,2" d="M1797.93,-585.86C1765.11,-585.69 1708.95,-585.4 1670.81,-585.21"/>
+<polygon fill="#ff0041" stroke="#ff0041" points="1670.58,-581.71 1660.56,-585.15 1670.55,-588.71 1670.58,-581.71"/>
+<text text-anchor="middle" x="1741" y="-587.4" font-family="Helvetica,sans-Serif" font-size="9.50">dxds, dsdx</text>
+</g>
+<!-- type~linearshallowwater2d_t&#45;&gt;type~dgmodel2d -->
+<g id="type~~graph~~TypeGraph_edge125" class="edge">
+<title>type~linearshallowwater2d_t&#45;&gt;type~dgmodel2d</title>
+<path fill="none" stroke="#ff0030" d="M2886.05,-402.1C2878.5,-404.64 2870.92,-407.6 2864,-411 2855.14,-415.35 2855.86,-423.63 2846,-424"/>
+</g>
+<!-- type~scalar3d_t&#45;&gt;type~self_dataobj -->
+<g id="type~~graph~~TypeGraph_edge126" class="edge">
+<title>type~scalar3d_t&#45;&gt;type~self_dataobj</title>
+<path fill="none" stroke="#ff0020" d="M1417.87,-416.75C1401.34,-419.04 1381.19,-421.12 1363,-421"/>
+</g>
+<!-- type~mappedscalar2d~2 -->
+<g id="type~~graph~~TypeGraph_node94" class="node">
+<title>type~mappedscalar2d~2</title>
+<g id="a_type~~graph~~TypeGraph_node94"><a xlink:href=".././type/mappedscalar2d~2.html" xlink:title="MappedScalar2D">
+<polygon fill="#5cb85c" stroke="#5cb85c" points="2256,-126 2152,-126 2152,-102 2256,-102 2256,-126"/>
+<text text-anchor="middle" x="2204" y="-111.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">MappedScalar2D</text>
+</a>
+</g>
+</g>
+<!-- type~mappedscalar2d~2&#45;&gt;type~mappedscalar2d_t -->
+<g id="type~~graph~~TypeGraph_edge128" class="edge">
+<title>type~mappedscalar2d~2&#45;&gt;type~mappedscalar2d_t</title>
+<path fill="none" stroke="#ff0010" d="M2172.65,-126.1C2165.68,-129.31 2158.44,-133 2152,-137 2116.32,-159.16 2108.33,-166.94 2079,-197 2056.16,-220.4 2033.55,-250.67 2019.56,-270.45"/>
+<polygon fill="#ff0010" stroke="#ff0010" points="2016.63,-268.54 2013.77,-278.74 2022.37,-272.55 2016.63,-268.54"/>
+</g>
+<!-- type~mappedscalar2d~2&#45;&gt;c_ptr -->
+<g id="type~~graph~~TypeGraph_edge127" class="edge">
+<title>type~mappedscalar2d~2&#45;&gt;c_ptr</title>
+<path fill="none" stroke="#ff0010" stroke-dasharray="5,2" d="M2153.82,-101.93C2114.07,-93.22 2056.52,-83 2005.5,-83 2005.5,-83 2005.5,-83 1740,-83 1244.22,-83 1069.21,81.18 626,-141 586.22,-160.94 596.16,-189.48 562,-218"/>
+<path fill="none" stroke="#ff0010" stroke-dasharray="5,2" d="M560,-218C508.27,-262.19 527.94,-297.41 514,-364 506.35,-400.53 527.07,-510.32 496,-531"/>
+<path fill="none" stroke="#ff0010" stroke-dasharray="5,2" d="M495,-531C430.69,-573.8 222.26,-530.72 148,-552 125.63,-558.41 124.22,-570.11 102,-577"/>
+<path fill="none" stroke="#ff0010" stroke-dasharray="5,2" d="M100,-577C83.5,-581.82 66.61,-590.94 53.34,-599.26"/>
+<polygon fill="#ff0010" stroke="#ff0010" points="51.26,-596.43 44.79,-604.82 55.08,-602.3 51.26,-596.43"/>
+<text text-anchor="middle" x="1453" y="-75.4" font-family="Helvetica,sans-Serif" font-size="9.50">jas_gpu</text>
+</g>
+</g>
+</svg>
+</div><script>var pantypegraphTypeGraph = svgPanZoom('#typegraphTypeGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="186pt" height="32pt"
+ viewBox="0.00 0.00 185.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 181.5,-28 181.5,4 -4,4"/>
+<!-- Type -->
+<g id="node1" class="node">
+<title>Type</title>
+<polygon fill="#5cb85c" stroke="#5cb85c" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="177.5,-24 72.5,-24 72.5,0 177.5,0 177.5,-24"/>
+<text text-anchor="middle" x="125" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a derived type to the parent type which it
+    extends. Dashed arrows point from a derived type to the other
+    types it contains as a components, with a label listing the name(s) of
+    said component(s). Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+        </div>
+      </div>
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-6"><p>SELF was developed by Fluid Numerics<br>&copy; 2024 3-Clause BSD with attribution
+</p>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-11-29 16:31            </p>
+        </div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+  </body>
+</html>
